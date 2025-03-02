@@ -1,1 +1,0 @@
-//#define SDK_CONDITION

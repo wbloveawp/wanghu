@@ -56,7 +56,7 @@ class CGameLogic
 
 public:
 	CGameLogic();
-	~CGameLogic();
+	~CGameLogic() {};
 
 	//Éú³ÉÅÆ
 	void rand_cards(user_cards_t* uc, carder* table_cards, char type=0,WORD good_chairid=0);

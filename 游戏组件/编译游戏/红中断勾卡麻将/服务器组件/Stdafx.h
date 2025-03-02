@@ -81,7 +81,8 @@
 #ifndef _UNICODE
 #pragma comment (lib,"../../../../系统模块/链接库/Ansi/KernelEngineD.lib")
 #else
-#pragma comment (lib,"../../../../系统模块/链接库/Unicode/KernelEngineD.lib")
+//#pragma comment (lib,"../../../../系统模块/链接库/Unicode/KernelEngineD.lib")
+#pragma comment (lib,"../../../../系统模块/链接库/KernelEngine.lib")
 #endif
 #endif
 

@@ -30,7 +30,7 @@
     <ProjectName>SparrowhzdgkServer</ProjectName>
     <ProjectGuid>{CA071FF5-97BF-42C3-99AF-FE8F8A0F0AF2}</ProjectGuid>
     <Keyword>MFCDLLProj</Keyword>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="Configuration">

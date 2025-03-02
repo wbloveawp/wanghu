@@ -1,0 +1,17 @@
+﻿cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  Stdafx.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\atlmfc\include\atlplus.h(26,10): warning C4467: 已弃用 ATL 属性的使用情况
+cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  HistoryScore.cpp
+  GameServerManager.cpp
+  GameServer.cpp
+  GameLogic.cpp
+  DlgCustomRule.cpp
+  CLog.cpp
+  正在生成代码...
+cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  TableFrameSink.cpp
+CLog.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+    正在创建库 ../../../../运行/Debug/Unicode/GameServer.lib 和对象 ../../../../运行/Debug/Unicode/GameServer.exp
+  GameServer.vcxproj -> E:\Workserver\wanghu\运行\Debug\Unicode\SparrowXZServer.dll
+  已复制         1 个文件。

@@ -1,0 +1,13 @@
+﻿  Stdafx.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\atlmfc\include\atlplus.h(26,10): warning C4467: 已弃用 ATL 属性的使用情况
+  CLog.cpp
+  DlgCustomRule.cpp
+  GameLogic.cpp
+  GameServer.cpp
+  GameServerManager.cpp
+  HistoryScore.cpp
+  TableFrameSink.cpp
+  正在生成代码...
+    正在创建库 ../../../../运行/Release/Unicode/GameServer.lib 和对象 ../../../../运行/Release/Unicode/GameServer.exp
+TableFrameSink.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl CGameLogic::~CGameLogic(void)" (??1CGameLogic@@QEAA@XZ)，函数 "int `public: __cdecl CTableFrameSink::CTableFrameSink(void)'::`1'::dtor$0" (?dtor$0@?0???0CTableFrameSink@@QEAA@XZ@4HA) 中引用了该符号
+..\..\..\..\运行\Release\unicode\sparrowhzdgkServer.dll : fatal error LNK1120: 1 个无法解析的外部命令

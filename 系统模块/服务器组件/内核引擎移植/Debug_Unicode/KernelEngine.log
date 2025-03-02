@@ -1,0 +1,633 @@
+﻿cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  Stdafx.cpp
+cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  TraceServiceManager.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(62,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(62,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(62,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(82,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(82,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(82,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(97,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(97,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceServiceManager.cpp(97,16): error C3861: “ThreadLock”: 找不到标识符
+  TraceService.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(40,1): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(40,1): error C2270: “GetMessageMap”: 非成员函数上不允许修饰符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(40,1): error C3861: “GetThisMessageMap”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(40,1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(40,1): error C2146: 语法错误: 缺少“;”(在标识符“ThisClass”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(40,1): error C2065: “ThisClass”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(43,2): error C2653: “ThisClass”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(43,2): error C2065: “OnCreate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(44,2): error C2653: “ThisClass”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(44,2): error C2065: “OnRButtonDown”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(47,2): error C2065: “OnClearAll”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(48,2): error C2065: “OnSelectAll”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(49,2): error C2065: “OnCopyString”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(50,2): error C2065: “OnSaveString”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(51,2): error C2065: “OnDeleteString”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(54,2): error C2065: “OnTraceServiceMessage”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(56,1): error C2248: “CWnd::GetThisMessageMap”: 无法访问 protected 成员(在“CWnd”类中声明)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\atlmfc\include\AfxWin.h(3254): message : 参见“CWnd::GetThisMessageMap”的声明
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\atlmfc\include\AfxWin.h(2181): message : 参见“CWnd”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(97,1): error C2511: “bool CTraceService::TraceString(LPCTSTR,enTraceLevel)”:“CTraceService”中没有找到重载的成员函数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.h(11): message : 参见“CTraceService”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(104,1): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(105,1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(107,2): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(108,2): error C2065: “m_lReserveLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(109,2): error C2065: “m_cbBuffer”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(111,2): warning C4508: “CTraceServiceControl”: 函数应返回一个值；假定“void”返回类型
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(112,1): error C2617: “CTraceServiceControl”: return 语句不一致
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(104): message : 参见“CTraceServiceControl”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(115,1): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(115,24): error C2523: “<未知>::~CTraceServiceControl”: 析构函数 标记不匹配
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(116,1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(115,44): error C2084: 函数“int CTraceServiceControl(void)”已有主体
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(104): message : 参见“CTraceServiceControl”的前一个定义
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(120,8): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(122,2): error C2355: “this”: 只能在非静态成员函数或非静态数据成员初始值设定项的内部引用
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(123,2): error C2355: “this”: 只能在非静态成员函数或非静态数据成员初始值设定项的内部引用
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(128,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(131,6): error C2065: “m_hWnd”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(142,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(142,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(142,27): error C2065: “m_CriticalSection”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(142,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(144,2): error C2065: “m_DataQueue”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(147,59): error C2660: “PostMessageW”: 函数不接受 3 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winuser.h(4033,1): message : 参见“PostMessageW”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(153,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(155,2): error C2790: “super”: 该关键字只能在类成员函数体的内部使用
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(158,2): error C3861: “InitializeService”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(164,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(176,25): error C2065: “LoadCallBack”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(180,5): error C3861: “StreamIn”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(186,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(194,116): error C2355: “this”: 只能在非静态成员函数或非静态数据成员初始值设定项的内部引用
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(205,25): error C2065: “SaveCallBack”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(209,5): error C3861: “StreamOut”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(215,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(218,2): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(218,2): error C2065: “m_lReserveLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(219,7): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(219,29): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(219,46): error C2065: “m_lReserveLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(222,2): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(223,2): error C2065: “m_lReserveLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(229,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(231,2): error C2065: “m_DataQueue”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(233,2): error C3861: “SetBackgroundColor”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(245,10): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(262,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(266,2): error C3861: “GetSel”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(269,19): error C3861: “GetTextLengthEx”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(272,2): error C3861: “SetSel”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(273,2): error C3861: “SetSelectionCharFormat”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(274,2): error C3861: “ReplaceSel”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(277,36): error C2660: “PostMessageW”: 函数不接受 3 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winuser.h(4033,1): message : 参见“PostMessageW”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(283,16): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(292,16): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(301,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(304,2): error C3861: “SetSel”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(305,2): error C3861: “ReplaceSel”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(311,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(314,2): error C3861: “SetSel”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(320,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(323,2): error C3861: “Copy”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(329,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(338,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(341,2): error C3861: “ReplaceSel”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(347,5): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(349,6): error C2790: “super”: 该关键字只能在类成员函数体的内部使用
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(358,6): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(361,11): error C2660: “SetFocus”: 函数不接受 0 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winuser.h(5863,1): message : 参见“SetFocus”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(376,21): error C3861: “GetSelectionType”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(381,23): error C2660: “ClientToScreen”: 函数不接受 1 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winuser.h(9434,1): message : 参见“ClientToScreen”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(382,62): error C2355: “this”: 只能在非静态成员函数或非静态数据成员初始值设定项的内部引用
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(382,66): error C2660: “CMenu::TrackPopupMenu”: 函数不接受 3 个参数
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\atlmfc\include\AfxWin.h(1162,7): message : 参见“CMenu::TrackPopupMenu”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(388,9): error C2653: “CTraceServiceControl”: 不是类或命名空间名称
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(392,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(392,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(392,27): error C2065: “m_CriticalSection”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(392,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(393,2): error C2065: “m_DataQueue”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(393,35): error C2065: “m_cbBuffer”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(393,53): error C2065: “m_cbBuffer”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(396,2): error C2039: "wIdentifier": 不是 "tagDataHead" 的成员
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(12): message : 参见“tagDataHead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(397,15): error C2039: "wIdentifier": 不是 "tagDataHead" 的成员
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(12): message : 参见“tagDataHead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(400,17): error C3861: “GetLineCount”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(401,7): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(401,40): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(404,3): error C2065: “m_lMaxLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(404,3): error C2065: “m_lReserveLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(405,33): error C2065: “m_lReserveLineCount”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TraceService.cpp(405,52): fatal error C1003: 错误计数超过 100；正在停止编译
+  TimerEngine.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.h(15,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(129,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(129,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(129,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(196,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(196,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(196,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(226,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(226,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(226,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(252,20): error C2039: "StartThread": 不是 "CTimerThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.h(14): message : 参见“CTimerThread”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(267,16): error C2039: "ConcludeThread": 不是 "CTimerThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.h(14): message : 参见“CTimerThread”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(306,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(306,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.cpp(306,16): error C3861: “ThreadLock”: 找不到标识符
+  TCPSocketService.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(7,19): error C3646: “CommandInfo”: 未知重写说明符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(7,30): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(21,23): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.h(13,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.h(28,25): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.h(30,16): error C2229: class“CTCPSocketServiceThread”有非法的大小为零的数组
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.h(171,20): error C2061: 语法错误: 标识符“TCP_Command”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(49,26): error C2065: “SOCKET_TCP_PACKET”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(60,22): error C2065: “SOCKET_STATUS_IDLE”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(64,2): error C2070: “BYTE []”: 非法的 sizeof 操作数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(73,23): error C2065: “DK_MAPPED”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(98,6): error C3861: “IsRuning”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(98,18): warning C4805: “==”: 在操作中将类型“unknown-type”与类型“bool”混合不安全
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(100,32): error C2660: “PostThreadMessageW”: 函数不接受 3 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winuser.h(4055,1): message : 参见“PostThreadMessageW”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(103,9): error C2791: 非法使用“super”: “CTCPSocketServiceThread”没有任何基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(103,18): error C2039: "ConcludeThread": 不是 "`global namespace'" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(110,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(110,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(110,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(155,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(155,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(155,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(196,2): error C2065: “SOCKET_STATUS_IDLE”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(203,26): error C2065: “SOCKET_STATUS_IDLE”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(233,21): error C2065: “SOCKET_STATUS_WAIT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(226,3): warning C4996: 'WSAAsyncSelect': Use WSAEventSelect() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(251,27): error C2065: “SOCKET_STATUS_CONNECT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(264,19): error C2065: “SOCKET_TCP_PACKET”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(266,27): error C2065: “SOCKET_STATUS_CONNECT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(281,20): error C2065: “SOCKET_STATUS_IDLE”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(402,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(402,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(402,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(405,16): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(406,5): error C2660: “CWHDataQueue::DistillData”: 函数不接受 3 个参数
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(99,7): message : 参见“CWHDataQueue::DistillData”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(409,19): error C2039: "wIdentifier": 不是 "tagDataHead" 的成员
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(12): message : 参见“tagDataHead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(494,82): error C2070: “BYTE []”: 非法的 sizeof 操作数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(503,3): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(503,13): error C2065: “pHead”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(503,22): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(503,32): error C2059: 语法错误:“)”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(505,30): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(508,16): error C2065: “pHead”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(510,22): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(511,29): error C2065: “TCP_Info”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(527,4): error C2065: “TCP_Command”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(527,16): error C2146: 语法错误: 缺少“;”(在标识符“Command”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(527,40): error C2039: "CommandInfo": 不是 "tagDecryptResult" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(5): message : 参见“tagDecryptResult”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(527,24): error C2513: “ADOCG::Command”: 在“=”前没有声明变量
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(529,15): error C2059: 语法错误:“.”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(530,4): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(531,20): error C2059: 语法错误:“.”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(532,5): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(533,6): error C2046: 非法的 case
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(541,4): error C2181: 没有匹配 if 的非法 else
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(545,48): error C2275: “ADOCG::Command”: 将此类型用作表达式非法
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Debug_Unicode\msado15.tlh(1922): message : 参见“ADOCG::Command”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(642,22): error C2065: “SOCKET_STATUS_CONNECT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(648,34): error C2065: “SUB_KN_VALIDATE_SOCKET”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(692,31): error C2039: "StartThread": 不是 "CTCPSocketServiceThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.h(12): message : 参见“CTCPSocketServiceThread”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(858,38): error C2065: “TCP_Command”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(858,50): error C2146: 语法错误: 缺少“)”(在标识符“Command”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(859,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(859,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(870,19): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(875,20): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886): error C2259: “CTCPSocketService”: 无法实例化抽象类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.h(108): message : 参见“CTCPSocketService”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886): message : 由于下列成员:
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886): message : “bool ITCPSocketService::SetServiceID(DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(534): message : 参见“ITCPSocketService::SetServiceID”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886): message : “bool ITCPSocketService::IsServiceState(void)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(541): message : 参见“ITCPSocketService::IsServiceState”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886): message : “bool ITCPSocketService::IsConnectState(void)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(543): message : 参见“ITCPSocketService::IsConnectState”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886): message : “bool ITCPSocketService::SendData(WORD,WORD,void *,WORD,DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(556): message : 参见“ITCPSocketService::SendData”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886): message : “bool ITCPSocketService::SendData(WORD,WORD,DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(554): message : 参见“ITCPSocketService::SendData”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886,1): error C2259: “CTCPSocketService”: 无法实例化抽象类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.h(108): message : 参见“CTCPSocketService”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886,1): message : 由于下列成员:
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886,1): message : “bool ITCPSocketService::SetServiceID(DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(534): message : 参见“ITCPSocketService::SetServiceID”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886,1): message : “bool ITCPSocketService::IsServiceState(void)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(541): message : 参见“ITCPSocketService::IsServiceState”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886,1): message : “bool ITCPSocketService::IsConnectState(void)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(543): message : 参见“ITCPSocketService::IsConnectState”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886,1): message : “bool ITCPSocketService::SendData(WORD,WORD,void *,WORD,DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(556): message : 参见“ITCPSocketService::SendData”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPSocketService.cpp(886,1): message : “bool ITCPSocketService::SendData(WORD,WORD,DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(554): message : 参见“ITCPSocketService::SendData”的声明
+  TCPNetworkEngine.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(12,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,26): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,26): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,55): error C2238: 意外的标记位于“;”之前
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(20,24): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(29,33): error C2061: 语法错误: 标识符“IAsynchronismEngineSink”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(43,1): error C2504: “IAsynchronismEngine”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(7,19): error C3646: “CommandInfo”: 未知重写说明符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(7,30): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(21,23): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(51,33): error C2061: 语法错误: 标识符“TCP_Command”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(85,24): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(182,25): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(183,16): error C2229: class“CTCPNetworkItem”有非法的大小为零的数组
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(284,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(311,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(340,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(372,83): error C2504: “IAsynchronismEngineSink”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(385,24): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(485,33): error C2061: 语法错误: 标识符“TCP_Command”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(156,2): error C2070: “BYTE []”: 非法的 sizeof 操作数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(244,2): error C2070: “BYTE []”: 非法的 sizeof 操作数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(270,19): error C2065: “SOCKET_TCP_PACKET”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(406,3): warning C4996: 'WSASendDisconnect': Use WSASend() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(479,3): warning C4996: 'WSASendDisconnect': Use WSASend() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(501,97): error C2070: “BYTE []”: 非法的 sizeof 操作数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(598,23): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(634,6): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(634,17): error C2065: “pHead”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(634,26): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(634,36): error C2059: 语法错误:“)”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(635,29): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(636,25): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(648,6): error C2065: “TCP_Command”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(648,18): error C2146: 语法错误: 缺少“;”(在标识符“Command”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(648,42): error C2039: "CommandInfo": 不是 "tagDecryptResult" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(5): message : 参见“tagDecryptResult”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(648,26): error C2513: “ADOCG::Command”: 在“=”前没有声明变量
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(650,17): error C2059: 语法错误:“.”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(651,6): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(652,22): error C2059: 语法错误:“.”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(653,7): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(654,7): error C2046: 非法的 case
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(658,12): error C2065: “SUB_KN_VALIDATE_SOCKET”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(658,7): error C2046: 非法的 case
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(660,8): error C2065: “TCP_Validate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(660,23): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(660,36): error C2065: “TCP_Validate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(660,50): error C2059: 语法错误:“)”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(661,8): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(661,33): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(662,20): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(665,82): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(665,52): warning C4473: “_snwprintf”: 没有为格式字符串传递足够的参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(665,52): message : 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(665,52): message : 缺失的可变参数 2 为格式字符串“%s”所需
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(677,6): error C2181: 没有匹配 if 的非法 else
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(682,49): error C2275: “ADOCG::Command”: 将此类型用作表达式非法
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Debug_Unicode\msado15.tlh(1922): message : 参见“ADOCG::Command”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(687,33): warning C4244: “-=”: 从“DWORD”转换到“WORD”，可能丢失数据
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(711,59): error C2664: “int CWHBase64::Encode(const CHAR *,int,CHAR [],int)”: 无法将参数 3 从“TCHAR [128]”转换为“CHAR []”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(711,43): message : 与指向的类型无关；强制转换要求 reinterpret_cast、C 样式强制转换或函数样式强制转换
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHBase64.h(24,13): message : 参见“CWHBase64::Encode”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(724,55): warning C4267: “-=”: 从“size_t”转换到“WORD”，可能丢失数据
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(743,2): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(743,13): error C2065: “pHead”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(743,22): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(743,32): error C2059: 语法错误:“)”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(748,32): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(751,23): error C2065: “pHead”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(752,22): error C2065: “SOCKET_TCP_BUFFER”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(753,27): error C2065: “TCP_Head”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(769,22): error C2039: "CommandInfo": 不是 "tagDecryptResult" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(5): message : 参见“tagDecryptResult”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(771,27): error C2039: "CommandInfo": 不是 "tagDecryptResult" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(5): message : 参见“tagDecryptResult”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(777,11): error C2065: “SUB_KN_VALIDATE_SOCKET”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(779,7): error C2065: “TCP_Validate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(779,22): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(779,35): error C2065: “TCP_Validate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(779,49): error C2059: 语法错误:“)”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(780,7): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(780,32): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(781,19): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(784,81): error C2065: “pValidate”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(784,51): warning C4473: “_snwprintf”: 没有为格式字符串传递足够的参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(784,51): message : 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(784,51): message : 缺失的可变参数 2 为格式字符串“%s”所需
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(803,61): error C2039: "CommandInfo": 不是 "tagDecryptResult" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Cipher.h(5): message : 参见“tagDecryptResult”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(803,124): error C2660: “ITCPNetworkItemSink::OnEventSocketRead”: 函数不接受 4 个参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(51,15): message : 参见“ITCPNetworkItemSink::OnEventSocketRead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(935,4): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(935,18): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(935,18): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(941,4): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(941,18): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(941,18): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1013,3): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1013,17): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1013,17): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1122,2): error C2065: “IID_IAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1122,2): error C2065: “VER_IAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1122,2): error C2061: 语法错误: 标识符“IAsynchronismEngineSink”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1163,18): error C2065: “PORT_LOGIC”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1164,18): error C2065: “PORT_CHAT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1166,18): error C2065: “PORT_PERSONAL_ROOM”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1168,18): error C2065: “PORT_GROUP”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1170,18): error C2065: “PORT_LINK”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1172,18): error C2065: “PORT_STATUS”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1173,18): error C2065: “PORT_GAMEMANAGE”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1226,25): error C2039: "StartThread": 不是 "CTCPNetworkThreadReadWrite" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(283): message : 参见“CTCPNetworkThreadReadWrite”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1231,27): error C2039: "StartThread": 不是 "CTCPNetworkThreadDetect" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(339): message : 参见“CTCPNetworkThreadDetect”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1235,27): error C2039: "StartThread": 不是 "CTCPNetworkThreadAccept" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(310): message : 参见“CTCPNetworkThreadAccept”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1251,23): error C2039: "ConcludeThread": 不是 "CTCPNetworkThreadDetect" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(339): message : 参见“CTCPNetworkThreadDetect”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1259,23): error C2039: "ConcludeThread": 不是 "CTCPNetworkThreadAccept" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(310): message : 参见“CTCPNetworkThreadAccept”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1274,18): error C2039: "ConcludeThread": 不是 "CTCPNetworkThreadReadWrite" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.h(283): message : 参见“CTCPNetworkThreadReadWrite”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1360,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1360,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1360,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1381,2): error C2065: “SOCKET_TCP_PACKET”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TCPNetworkEngine.cpp(1381,2): fatal error C1003: 错误计数超过 100；正在停止编译
+  KernelEngine.cpp
+  DataBaseEngine.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\TimerEngine.h(15,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.h(13,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.h(25,27): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.h(68,27): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(54,32): error C2660: “IDataBaseEngineSink::OnDataBaseEngineRequest”: 函数不接受 4 个参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(467,16): message : 参见“IDataBaseEngineSink::OnDataBaseEngineRequest”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(77,3): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(77,17): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(77,17): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(81,65): error C2660: “CWHDataQueue::DistillData”: 函数不接受 3 个参数
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(99,7): message : 参见“CWHDataQueue::DistillData”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(83,3): error C2065: “ThreadLock”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(85,53): error C2039: "wIdentifier": 不是 "tagDataHead" 的成员
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(12): message : 参见“tagDataHead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(134,34): error C2039: "OnDataBaseEngineConclude": 不是 "IDataBaseEngineSink" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(451): message : 参见“IDataBaseEngineSink”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(138,34): error C2039: "OnDataBaseEngineConclude": 不是 "IDataBaseEngineSink" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(451): message : 参见“IDataBaseEngineSink”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(185,22): error C2039: "StartThread": 不是 "CDataBaseConnection" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.h(12): message : 参见“CDataBaseConnection”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(214,16): error C2039: "ConcludeThread": 不是 "CDataBaseConnection" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.h(12): message : 参见“CDataBaseConnection”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(228,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(228,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(228,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(294,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(294,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(294,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(308,3): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(308,17): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(308,17): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(322,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(322,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(322,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(336,3): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(336,17): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(336,17): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(355,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(355,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(355,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(363,67): error C2660: “CWHDataQueue::DistillData”: 函数不接受 3 个参数
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(99,7): message : 参见“CWHDataQueue::DistillData”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(365,3): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(365,17): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(365,17): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(367,51): error C2039: "wIdentifier": 不是 "tagDataHead" 的成员
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(12): message : 参见“tagDataHead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(417,2): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(418,48): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451): error C2259: “CDataBaseEngine”: 无法实例化抽象类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.h(51): message : 参见“CDataBaseEngine”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451): message : 由于下列成员:
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451): message : “bool IDataBaseEngine::SetHashEngineKey(bool)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(424): message : 参见“IDataBaseEngine::SetHashEngineKey”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451): message : “void IDataBaseEngine::SetDBExceptionHookFun(DBExceptionHookFun)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(426): message : 参见“IDataBaseEngine::SetDBExceptionHookFun”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451): message : “bool IDataBaseEngine::DeleteEngineTimer(DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(433): message : 参见“IDataBaseEngine::DeleteEngineTimer”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451): message : “bool IDataBaseEngine::ActiveEngineTimer(DWORD,DWORD,DWORD,WPARAM)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(435): message : 参见“IDataBaseEngine::ActiveEngineTimer”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451): message : “bool IDataBaseEngine::PostDataBaseRequest(WORD,DWORD,DWORD,DWORD,void *,WORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(437): message : 参见“IDataBaseEngine::PostDataBaseRequest”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451,1): error C2259: “CDataBaseEngine”: 无法实例化抽象类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.h(51): message : 参见“CDataBaseEngine”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451,1): message : 由于下列成员:
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451,1): message : “bool IDataBaseEngine::SetHashEngineKey(bool)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(424): message : 参见“IDataBaseEngine::SetHashEngineKey”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451,1): message : “void IDataBaseEngine::SetDBExceptionHookFun(DBExceptionHookFun)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(426): message : 参见“IDataBaseEngine::SetDBExceptionHookFun”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451,1): message : “bool IDataBaseEngine::DeleteEngineTimer(DWORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(433): message : 参见“IDataBaseEngine::DeleteEngineTimer”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451,1): message : “bool IDataBaseEngine::ActiveEngineTimer(DWORD,DWORD,DWORD,WPARAM)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(435): message : 参见“IDataBaseEngine::ActiveEngineTimer”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseEngine.cpp(451,1): message : “bool IDataBaseEngine::PostDataBaseRequest(WORD,DWORD,DWORD,DWORD,void *,WORD)”: 是抽象的
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(437): message : 参见“IDataBaseEngine::PostDataBaseRequest”的声明
+  DataBaseAide.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.cpp(409,1): error C2511: “void CDataBaseAide::AddParameter(LPCTSTR,BYTE *,ULONG,ADOCG::ParameterDirectionEnum)”:“CDataBaseAide”中没有找到重载的成员函数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.h(11): message : 参见“CDataBaseAide”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.cpp(410,26): error C2597: 对非静态成员“CDataBaseAide::m_pIDataBase”的非法引用
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.cpp(410,26): error C3867: “CDataBaseAide::m_pIDataBase”: 非标准语法；请使用 "&" 来创建指向成员的指针
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.cpp(453,21): error C2039: "GetReturnValue": 不是 "CDataBaseAide" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.h(11): message : 参见“CDataBaseAide”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.cpp(455,2): error C2065: “m_pIDataBase”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\DataBaseAide.cpp(456,9): error C2065: “m_pIDataBase”: 未声明的标识符
+  AttemperEngine.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(12,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,26): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,26): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,55): error C2238: 意外的标记位于“;”之前
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(20,24): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(29,33): error C2061: 语法错误: 标识符“IAsynchronismEngineSink”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(43,1): error C2504: “IAsynchronismEngine”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.h(12,79): error C2504: “IAsynchronismEngineSink”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.h(28,24): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.h(79,53): error C2061: 语法错误: 标识符“TCP_Command”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.h(88,55): error C2061: 语法错误: 标识符“TCP_Command”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(33,2): error C2065: “IID_IAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(33,2): error C2065: “VER_IAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(33,2): error C2061: 语法错误: 标识符“IAsynchronismEngineSink”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(127,2): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(128,43): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(131,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(131,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(131,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(161,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(161,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(161,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(176,2): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(177,44): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(180,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(180,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(180,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(211,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(211,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(211,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(212,2): error C2065: “NTY_TCPSocketLinkEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(212,25): error C2146: 语法错误: 缺少“;”(在标识符“pConnectEvent”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(212,25): error C2065: “pConnectEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(215,2): error C2065: “pConnectEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(216,2): error C2065: “pConnectEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(219,51): error C2065: “EVENT_TCP_SOCKET_LINK”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(219,74): error C2065: “pConnectEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(219,95): error C2065: “NTY_TCPSocketLinkEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(226,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(226,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(226,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(227,2): error C2065: “NTY_TCPSocketShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(227,25): error C2146: 语法错误: 缺少“;”(在标识符“pCloseEvent”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(227,25): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(230,2): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(231,2): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(234,51): error C2065: “EVENT_TCP_SOCKET_SHUT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(234,74): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(234,93): error C2065: “NTY_TCPSocketShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(238,61): error C2061: 语法错误: 标识符“TCP_Command”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(241,2): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(241,2): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(242,7): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(242,49): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(245,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(245,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(245,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(249,20): error C2275: “ADOCG::Command”: 将此类型用作表达式非法
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Debug_Unicode\msado15.tlh(1922): message : 参见“ADOCG::Command”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(250,22): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(251,12): error C2039: "wServiceID": 不是 "NTY_TCPSocketReadEvent" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(162): message : 参见“NTY_TCPSocketReadEvent”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(254,6): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(260,31): error C2065: “pData”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(261,29): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(276,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(276,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(276,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(281,15): error C2039: "dwClientAddr": 不是 "NTY_TCPNetworkAcceptEvent" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(185): message : 参见“NTY_TCPNetworkAcceptEvent”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(291,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(291,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(291,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(292,2): error C2065: “NTY_TCPNetworkShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(292,26): error C2146: 语法错误: 缺少“;”(在标识符“pCloseEvent”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(292,26): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(295,2): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(296,2): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(297,2): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(300,51): error C2065: “EVENT_TCP_NETWORK_SHUT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(300,75): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(300,94): error C2065: “NTY_TCPNetworkShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(304,63): error C2061: 语法错误: 标识符“TCP_Command”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(307,2): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(307,2): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(308,7): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(308,50): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(311,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(311,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(311,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(315,21): error C2275: “ADOCG::Command”: 将此类型用作表达式非法
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\Debug_Unicode\msado15.tlh(1922): message : 参见“ADOCG::Command”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(316,23): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(320,6): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(326,31): error C2065: “pData”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(327,29): error C2065: “wDataSize”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(363,30): error C2039: "OnAttemperEngineConclude": 不是 "IAttemperEngineSink" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(710): message : 参见“IAttemperEngineSink”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(414,176): error C2660: “IAttemperEngineSink::OnEventDataBase”: 函数不接受 4 个参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(731,16): message : 参见“IAttemperEngineSink::OnEventDataBase”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(432,61): error C2039: "wServiceID": 不是 "NTY_TCPSocketReadEvent" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(162): message : 参见“NTY_TCPSocketReadEvent”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(432,160): error C2660: “IAttemperEngineSink::OnEventTCPSocketRead”: 函数不接受 4 个参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\KernelEngineHead.h(740,16): message : 参见“IAttemperEngineSink::OnEventTCPSocketRead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(436,7): error C2065: “EVENT_TCP_SOCKET_SHUT”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(439,4): error C2065: “NTY_TCPSocketShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(440,26): error C2065: “NTY_TCPSocketShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(443,4): error C2065: “NTY_TCPSocketShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(443,29): error C2065: “pCloseEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(443,42): error C2065: “NTY_TCPSocketShutEvent”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AttemperEngine.cpp(443,65): fatal error C1003: 错误计数超过 100；正在停止编译
+  AsynchronismEngine.cpp
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(12,1): error C2504: “CWHThread”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,26): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,26): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(16,55): error C2238: 意外的标记位于“;”之前
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(20,24): error C2065: “MAX_ASYNCHRONISM_DATA”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(29,33): error C2061: 语法错误: 标识符“IAsynchronismEngineSink”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(43,1): error C2504: “IAsynchronismEngine”: 未定义基类
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(16,2): error C2065: “m_pIAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(26,53): error C2065: “IAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(26,78): error C2065: “pIAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(26,102): error C2761: “void CAsynchronismThread::SetAsynchronismEngineSink(void)”: 不允许重新声明成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(27,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(27,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(36,9): error C2065: “m_pIAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(48,9): error C2065: “m_pIAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(69,3): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(69,17): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(69,17): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(72,88): error C2660: “CWHDataQueue::DistillData”: 函数不接受 3 个参数
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(99,7): message : 参见“CWHDataQueue::DistillData”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(74,3): error C2065: “ThreadLock”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(76,3): error C2065: “m_pIAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(76,65): error C2039: "wIdentifier": 不是 "tagDataHead" 的成员
+E:\Workserver\wanghu\系统模块\公共组件\公共服务\WHDataQueue.h(12): message : 参见“tagDataHead”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(102,2): error C2440: “static_cast”: 无法从“CAsynchronismEngine *”转换为“IServiceModule *”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(102,2): message : 与指向的类型无关；强制转换要求 reinterpret_cast、C 样式强制转换或函数样式强制转换
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(103,2): error C2065: “IID_IAsynchronismEngine”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(103,2): error C2065: “VER_IAsynchronismEngine”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(103,2): error C2061: 语法错误: 标识符“IAsynchronismEngine”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(104,2): error C2061: 语法错误: 标识符“IAsynchronismEngine”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(104,2): error C2146: 语法错误: 缺少“(”(在标识符“IAsynchronismEngine”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(111,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(111,16): error C2146: 语法错误: 缺少“;”(在标识符“lock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(111,16): error C2672: “lock”: 未找到匹配的重载函数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(111,38): error C2780: “void std::lock(_Lock0 &,_Lock1 &,_LockN &...)”: 应输入 3 个参数，却提供了 1 个
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\mutex(417): message : 参见“std::lock”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(121,50): error C2065: “IAsynchronismEngineSink”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(121,50): error C2059: 语法错误:“)”
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(125,54): error C2660: “CAsynchronismThread::SetAsynchronismEngineSink”: 函数不接受 1 个参数
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(29,7): message : 参见“CAsynchronismThread::SetAsynchronismEngineSink”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(135,28): error C2039: "IsRuning": 不是 "CAsynchronismThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(11): message : 参见“CAsynchronismThread”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(138,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(138,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(138,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(149,2): error C2065: “CWHDataLocker”: 未声明的标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(149,16): error C2146: 语法错误: 缺少“;”(在标识符“ThreadLock”的前面)
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(149,16): error C3861: “ThreadLock”: 找不到标识符
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(159,27): error C2039: "IsRuning": 不是 "CAsynchronismThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(11): message : 参见“CAsynchronismThread”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(165,30): error C2039: "StartThread": 不是 "CAsynchronismThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(11): message : 参见“CAsynchronismThread”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(180,27): error C2039: "IsRuning": 不是 "CAsynchronismThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(11): message : 参见“CAsynchronismThread”的声明
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.cpp(182,24): error C2039: "ConcludeThread": 不是 "CAsynchronismThread" 的成员
+E:\Workserver\wanghu\系统模块\服务器组件\内核引擎移植\AsynchronismEngine.h(11): message : 参见“CAsynchronismThread”的声明
+  正在生成代码...

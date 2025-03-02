@@ -1,7 +1,0 @@
-E:\工作目录\6603\QP6603\至尊版\游戏系统\第三方库\hiredis\hiredis.dir\Debug\alloc.obj
-E:\工作目录\6603\QP6603\至尊版\游戏系统\第三方库\hiredis\hiredis.dir\Debug\async.obj
-E:\工作目录\6603\QP6603\至尊版\游戏系统\第三方库\hiredis\hiredis.dir\Debug\dict.obj
-E:\工作目录\6603\QP6603\至尊版\游戏系统\第三方库\hiredis\hiredis.dir\Debug\hiredis.obj
-E:\工作目录\6603\QP6603\至尊版\游戏系统\第三方库\hiredis\hiredis.dir\Debug\net.obj
-E:\工作目录\6603\QP6603\至尊版\游戏系统\第三方库\hiredis\hiredis.dir\Debug\sds.obj
-E:\工作目录\6603\QP6603\至尊版\游戏系统\第三方库\hiredis\hiredis.dir\Debug\sockcompat.obj

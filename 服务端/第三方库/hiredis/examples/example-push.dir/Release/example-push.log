@@ -1,3 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1889,5): warning : The referenced project 'C:\Users\Administrator\Desktop\hiredis-master\hiredis.vcxproj' does not exist.
-  example-push.c
-c1 : fatal error C1083: 无法打开源文件: “C:\Users\Administrator\Desktop\hiredis-master\examples\example-push.c”: No such file or directory

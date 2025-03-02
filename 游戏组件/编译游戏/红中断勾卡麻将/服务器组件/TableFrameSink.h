@@ -58,15 +58,59 @@ public:
 	//接口查询
 	virtual void * QueryInterface(const IID & Guid, DWORD dwQueryVer);
 
-	//管理接口
-public:
+	
+public://游戏事件 ITableFrameSink
 	//初始化
 	virtual bool InitTableFrameSink(IUnknownEx* pIUnknownEx);
 	//复位桌子
 	virtual VOID ResetTableFrameSink();
-
+	//游戏开始
+	virtual bool OnEventGameStart();
+	//游戏暂停
+	virtual bool OnEventGamePause() { return true; }
+	//游戏继续
+	virtual bool OnEventGameContinue() { return true; }
+	//游戏结束
+	virtual bool OnEventGameConclude(WORD wChairID, IServerUserItem* pIServerUserItem, BYTE cbReason);
+	//发送场景
+	virtual bool OnEventSendGameScene(WORD wChiarID, IServerUserItem* pIServerUserItem, BYTE cbGameStatus, bool bSendSecret);
+	//事件接口
+	//定时器事件
+	virtual bool OnTimerMessage(DWORD wTimerID, WPARAM wBindParam);
+	//数据事件
+	virtual bool OnDataBaseMessage(WORD wRequestID, VOID* pData, WORD wDataSize) { return false; }
+	//积分事件
+	virtual bool OnUserScroeNotify(WORD wChairID, IServerUserItem* pIServerUserItem, BYTE cbReason) { return false; }
+	
+public://ITableUserAction --用户事件
+	//用户断线
+	virtual bool OnActionUserOffLine(IServerUserItem* pIServerUserItem);
+	//用户重入
+	virtual bool OnActionUserConnect(IServerUserItem* pIServerUserItem) { return true; }
+	//用户坐下
+	virtual bool OnActionUserSitDown(IServerUserItem* pIServerUserItem, bool bLookonUser);
+	//用户起立
+	virtual bool OnActionUserStandUp(IServerUserItem* pIServerUserItem, bool bLookonUser);
+	//用户同意
+	virtual bool OnActionUserReady(IServerUserItem* pIServerUserItem, VOID* pData, WORD wDataSize);
 	//查询接口
-public:
+public://底分变更--IEventBaseScore
+	virtual VOID  OnEventBaseScoreVariation(LONG lBaseScore);
+public://底分变更--IEventUserScore
+	//分数变更
+	virtual VOID  OnEventScoreVariation(IServerUserItem* pIServerUserItem);
+
+public://信息函数 --IEventBattleItem
+	//赢取分数
+	virtual SCORE GetBattleWinScore() { return 0; };
+	//同意人数
+	virtual WORD GetDismissAgreeCount() { return 0; };
+	//约战摘要
+	virtual LPCTSTR GetUserBattleAbstract(WORD wChairID) { return 0; };
+	//事件通知
+
+
+
 	//查询限额
 	virtual SCOREEX QueryConsumeQuota(IServerUserItem * pIServerUserItem){  return 0; };
 	//最少积分
@@ -80,28 +124,6 @@ public:
 	virtual void SetGameBaseScore(SCOREEX lBaseScore){};
 
 
-	//游戏事件
-public:
-	//游戏开始
-	virtual bool OnEventGameStart();
-	//游戏暂停
-	virtual bool OnEventGamePause() { return true; }
-	//游戏继续
-	virtual bool OnEventGameContinue() { return true; }
-
-	//游戏结束
-	virtual bool OnEventGameConclude(WORD wChairID, IServerUserItem * pIServerUserItem, BYTE cbReason);
-	//发送场景
-	virtual bool OnEventSendGameScene(WORD wChiarID, IServerUserItem * pIServerUserItem, BYTE cbGameStatus, bool bSendSecret);
-
-	//事件接口
-public:
-	//定时器事件
-	virtual bool OnTimerMessage(DWORD wTimerID, WPARAM wBindParam);
-	//数据事件
-	virtual bool OnDataBaseMessage(WORD wRequestID, VOID * pData, WORD wDataSize) { return false; }
-	//积分事件
-	virtual bool OnUserScroeNotify(WORD wChairID, IServerUserItem * pIServerUserItem, BYTE cbReason) { return false; }
 
 	//网络接口
 public:
@@ -110,30 +132,8 @@ public:
 	//框架消息处理
 	virtual bool OnFrameMessage(WORD wSubCmdID, VOID * pDataBuffer, WORD wDataSize, IServerUserItem * pIServerUserItem);
 
-	//用户事件
-public:
-	//用户断线
-	virtual bool OnActionUserOffLine(IServerUserItem * pIServerUserItem);
-	//用户重入
-	virtual bool OnActionUserConnect(IServerUserItem* pIServerUserItem) { return true; }
-	//用户坐下
-	virtual bool OnActionUserSitDown(IServerUserItem * pIServerUserItem, bool bLookonUser);
-	//用户起立
-	virtual bool OnActionUserStandUp(IServerUserItem * pIServerUserItem, bool bLookonUser);
-	//用户同意
-	virtual bool OnActionUserReady(IServerUserItem* pIServerUserItem, VOID* pData, WORD wDataSize);
-
-
 	//游戏事件
 protected:
-	//用户选缺
-	bool OnUserCallCard(WORD wChairID, BYTE cbCallCard);
-	//用户出牌
-	bool OnUserOutCard(WORD wChairID, BYTE cbCardData, bool bClient = false);
-	//用户操作
-	bool OnUserOperateCard(WORD wChairID, BYTE cbOperateCode, BYTE cbOperateCard);
-	//用户换三张
-	bool OnUserChangeCard(WORD wChairID, BYTE cbChangeCardData[MAX_CHANGE_CARDCOUNT], bool bClient = false);
 	//用户托管
 	bool OnUserTrustee(WORD wChairID, bool bTrustee);
 	//事件接口
@@ -144,29 +144,20 @@ public:
 	virtual WORD  GetStartPlayerCount();
 	//允许准备
 	virtual bool  IsAllowPlayerReady(WORD wChairID);
-	//底分变更
-	virtual VOID  OnEventBaseScoreVariation(LONG lBaseScore);
-	//分数变更
-	virtual VOID  OnEventScoreVariation(IServerUserItem* pIServerUserItem);
+
 
 	//接口函数
 public:
 	//解散时间
-	virtual DWORD GetBattleDismissTime();
+	virtual DWORD GetBattleDismissTime() { return 0; };
 	//踢人时间
-	virtual DWORD GetUnReadyKickOutTime();
+	virtual DWORD GetUnReadyKickOutTime() { return 0; };
 	//解散时间
-	virtual DWORD GetAgreementDismissTime();
+	virtual DWORD GetAgreementDismissTime() { return 0; };
 
 
 	//信息函数
 public:
-	//赢取分数
-	virtual SCORE GetBattleWinScore() { return 0; }
-	//同意人数
-	virtual WORD GetDismissAgreeCount();
-	//约战摘要
-	virtual LPCTSTR GetUserBattleAbstract(WORD wChairID) { return L""; }
 
 //事件通知
 public:

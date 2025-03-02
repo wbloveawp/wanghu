@@ -1,4 +1,0 @@
-﻿cd /d E:\工作目录\7001\捕鱼版\游戏系统\运行文件\Protobuf
-protoc.exe --proto_path=proto --cpp_out=message proto\GameServer.proto
-
-
