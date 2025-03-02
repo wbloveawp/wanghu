@@ -1,0 +1,26 @@
+#ifndef CMD_CHAT_SERVER_HEAD_FILE
+#define CMD_CHAT_SERVER_HEAD_FILE
+
+#pragma pack(1)
+
+
+//////////////////////////////////////////////////////////////////////////
+//命令定义
+
+//消息命令
+#define MDM_AC_CHAT_SERVICE			10									//聊天命令
+
+//////////////////////////////////////////////////////////////////////////
+
+//请求命令
+#define SUB_AC_C_SEND_MESSAGE		10									//发送消息
+
+//应答命令
+#define SUB_AC_S_MESSAGE_RESULT		100									//消息结果
+#define SUB_AC_S_MESSAGE_NOTIFY		101									//消息通知
+
+/////////////////////////////////////////////////////////////////////////////
+
+#pragma pack()
+
+#endif

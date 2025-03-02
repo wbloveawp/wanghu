@@ -1,0 +1,22 @@
+#ifndef DATA_BASE_PACKET_HEAD_FILE
+#define DATA_BASE_PACKET_HEAD_FILE
+
+//////////////////////////////////////////////////////////////////////////
+//请求数据包
+
+//系统命令
+#define DBR_GR_STORE_VIDEO			1									//存储录像
+
+//////////////////////////////////////////////////////////////////////////
+//存储录像
+struct DBR_GR_StoreVideo
+{
+	WORD							wKindID;							//类型标识
+	WORD							wVideoSize;							//数据大小
+	SYSTEMTIME						VideoCreateTime;					//生成时间
+	WCHAR							szVideoNumber[LEN_VIDEO_NUMBER];	//录像编号	
+};
+
+//////////////////////////////////////////////////////////////////////////////////
+
+#endif

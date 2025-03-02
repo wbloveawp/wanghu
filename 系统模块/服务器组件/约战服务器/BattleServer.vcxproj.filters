@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AttemperEngineSink.cpp" />
+    <ClCompile Include="BattleManager.cpp" />
+    <ClCompile Include="BattleServer.cpp" />
+    <ClCompile Include="BattleServerDlg.cpp" />
+    <ClCompile Include="BattleService.cpp" />
+    <ClCompile Include="DataBaseEngineSink.cpp" />
+    <ClCompile Include="InitParameter.cpp" />
+    <ClCompile Include="ServiceUnits.cpp" />
+    <ClCompile Include="Stdafx.cpp" />
+    <ClCompile Include="GlobalInfoManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AttemperEngineSink.h" />
+    <ClInclude Include="BattleManager.h" />
+    <ClInclude Include="BattleServer.h" />
+    <ClInclude Include="BattleServerDlg.h" />
+    <ClInclude Include="BattleServiceHead.h" />
+    <ClInclude Include="ControlPacket.h" />
+    <ClInclude Include="DataBaseEngineSink.h" />
+    <ClInclude Include="DataBasePacket.h" />
+    <ClInclude Include="InitParameter.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ServiceUnits.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="GlobalInfoManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BattleServer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\BattleServer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\BattleServer.rc2" />
+  </ItemGroup>
+</Project>

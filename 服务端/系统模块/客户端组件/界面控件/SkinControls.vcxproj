@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>界面控件</ProjectName>
+    <ProjectGuid>{9580A9BA-2C2C-4359-852C-FD627732BF1D}</ProjectGuid>
+    <SccProjectName />
+    <SccAuxPath />
+    <SccLocalPath />
+    <SccProvider />
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27625.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>SkinControlsD</TargetName>
+    <OutDir>..\..\..\运行\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>SkinControls</TargetName>
+    <OutDir>..\..\..\运行\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;_UNICODE;SKIN_CONTROL_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ModuleDefinitionFile>.\SkinControlsD.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)SkinControls.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>../../链接库/SkinControlsD.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\..\发布组件\客户端组件\$(ConfigurationName)
+copy /y $(OutDir)$(TargetFileName) ..\..\..\发布组件\客户端组件\$(ConfigurationName)\$(TargetFileName)
+
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;_UNICODE;SKIN_CONTROL_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ModuleDefinitionFile>.\SkinControls.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)SkinControls.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>../../链接库/SkinControls.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\..\发布组件\客户端组件\$(ConfigurationName)
+copy /y $(OutDir)$(TargetFileName) ..\..\..\发布组件\客户端组件\$(ConfigurationName)\$(TargetFileName)
+
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="SkinAide.cpp" />
+    <ClCompile Include="SkinButton.cpp" />
+    <ClCompile Include="SkinComboBox.cpp" />
+    <ClCompile Include="SkinControls.cpp" />
+    <ClCompile Include="SkinDialog.cpp" />
+    <ClCompile Include="SkinEdit.cpp" />
+    <ClCompile Include="SkinHyperLink.cpp" />
+    <ClCompile Include="SkinListCtrl.cpp" />
+    <ClCompile Include="SkinMenu.cpp" />
+    <ClCompile Include="SkinResourceManager.cpp" />
+    <ClCompile Include="SkinRichEdit.cpp" />
+    <ClCompile Include="SkinScrollBar.cpp" />
+    <ClCompile Include="SkinSplitter.cpp" />
+    <ClCompile Include="SkinTabControl.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SkinAide.h" />
+    <ClInclude Include="SkinButton.h" />
+    <ClInclude Include="SkinComboBox.h" />
+    <ClInclude Include="SkinControlsHead.h" />
+    <ClInclude Include="SkinDialog.h" />
+    <ClInclude Include="SkinEdit.h" />
+    <ClInclude Include="SkinHyperLink.h" />
+    <ClInclude Include="SkinListCtrl.h" />
+    <ClInclude Include="SkinMenu.h" />
+    <ClInclude Include="SkinResourceManager.h" />
+    <ClInclude Include="SkinRichEdit.h" />
+    <ClInclude Include="SkinScrollBar.h" />
+    <ClInclude Include="SkinSplitter.h" />
+    <ClInclude Include="SkinTabControl.h" />
+    <ClInclude Include="Stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\ENCIRCLE_BL.bmp" />
+    <Image Include="Res\ENCIRCLE_BM.bmp" />
+    <Image Include="Res\ENCIRCLE_BR.bmp" />
+    <Image Include="Res\ENCIRCLE_ML.bmp" />
+    <Image Include="Res\ENCIRCLE_MR.bmp" />
+    <Image Include="Res\ENCIRCLE_TL.bmp" />
+    <Image Include="Res\ENCIRCLE_TM.bmp" />
+    <Image Include="Res\ENCIRCLE_TR.bmp" />
+    <Image Include="Res\FRAME_BL.bmp" />
+    <Image Include="Res\FRAME_BM.bmp" />
+    <Image Include="Res\FRAME_BR.bmp" />
+    <Image Include="Res\FRAME_LM.bmp" />
+    <Image Include="Res\FRAME_ML.bmp" />
+    <Image Include="Res\FRAME_MR.bmp" />
+    <Image Include="Res\FRAME_RM.bmp" />
+    <Image Include="Res\FRAME_TL.bmp" />
+    <Image Include="Res\FRAME_TM.bmp" />
+    <Image Include="Res\FRAME_TR.bmp" />
+    <Image Include="Res\SKIN_BUTTON_BACK.bmp" />
+    <Image Include="Res\SKIN_HEADER_L.bmp" />
+    <Image Include="Res\SKIN_HEADER_M.bmp" />
+    <Image Include="Res\SKIN_HEADER_R.bmp" />
+    <Image Include="Res\SKIN_HEAD_TITLE.bmp" />
+    <Image Include="Res\SKIN_ICON.ico" />
+    <Image Include="Res\SKIN_MENU_FLAGS.bmp" />
+    <Image Include="Res\SKIN_WND_BL.bmp" />
+    <Image Include="Res\SKIN_WND_BM.bmp" />
+    <Image Include="Res\SKIN_WND_BR.bmp" />
+    <Image Include="Res\Skin_wnd_close.bmp" />
+    <Image Include="Res\SKIN_WND_MAX.bmp" />
+    <Image Include="Res\SKIN_WND_MIN.bmp" />
+    <Image Include="Res\SKIN_WND_ML.bmp" />
+    <Image Include="Res\SKIN_WND_MR.bmp" />
+    <Image Include="Res\SKIN_WND_RESORE.bmp" />
+    <Image Include="Res\SKIN_WND_TL.bmp" />
+    <Image Include="Res\SKIN_WND_TM.bmp" />
+    <Image Include="Res\SKIN_WND_TR.bmp" />
+    <Image Include="Res\SPLITTER_HOR.bmp" />
+    <Image Include="Res\SPLITTER_VOR.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\HAND_CUR.cur" />
+    <None Include="res\SkinControls.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SkinControls.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

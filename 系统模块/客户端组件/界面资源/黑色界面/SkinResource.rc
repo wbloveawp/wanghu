@@ -1,0 +1,416 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""Res\\SkinResource.rc2""  // 不是由 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 8,1,0,1
+ PRODUCTVERSION 8,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "深圳市网狐科技有限公司"
+            VALUE "CompanyName", "深圳市网狐科技有限公司"
+            VALUE "FileDescription", "平台资源"
+            VALUE "FileVersion", "8, 1, 0, 1"
+            VALUE "InternalName", "SkinResource.dll"
+            VALUE "LegalCopyright", "深圳市网狐科技有限公司保留所有权利。"
+            VALUE "OriginalFilename", "SkinResource.dll"
+            VALUE "ProductName", "平台资源"
+            VALUE "ProductVersion", "8, 1, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SKIN_WND_TR         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_TR.bmp"
+IDB_SKIN_WND_TM         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_TM.bmp"
+IDB_SKIN_WND_TL         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_TL.bmp"
+IDB_SKIN_WND_RESORE     BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_RESORE.bmp"
+IDB_SKIN_WND_MR         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_MR.bmp"
+IDB_SKIN_WND_ML         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_ML.bmp"
+IDB_SKIN_WND_MIN        BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_MIN.bmp"
+IDB_SKIN_WND_MAX        BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_MAX.bmp"
+IDB_SKIN_WND_CLOSE      BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_CLOSE.BMP"
+IDB_SKIN_WND_BR         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_BR.bmp"
+IDB_SKIN_WND_BM         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_BM.bmp"
+IDB_SKIN_WND_BL         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_WND_BL.bmp"
+IDB_SKIN_MENU_FLAGS     BITMAP                  "Res\\SKIN_CONTROL\\SKIN_MENU_FLAGS.bmp"
+IDB_SKIN_HEADER_R       BITMAP                  "Res\\SKIN_CONTROL\\SKIN_HEADER_R.bmp"
+IDB_SKIN_HEADER_M       BITMAP                  "Res\\SKIN_CONTROL\\SKIN_HEADER_M.bmp"
+IDB_SKIN_HEADER_L       BITMAP                  "Res\\SKIN_CONTROL\\SKIN_HEADER_L.bmp"
+IDB_SKIN_BUTTON_BACK    BITMAP                  "Res\\SKIN_CONTROL\\SKIN_BUTTON_BACK.bmp"
+IDB_ENCIRCLE_TR         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_TR.bmp"
+IDB_ENCIRCLE_TM         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_TM.bmp"
+IDB_ENCIRCLE_TL         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_TL.bmp"
+IDB_ENCIRCLE_MR         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_MR.bmp"
+IDB_ENCIRCLE_ML         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_ML.bmp"
+IDB_ENCIRCLE_BR         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_BR.bmp"
+IDB_ENCIRCLE_BM         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_BM.bmp"
+IDB_ENCIRCLE_BL         BITMAP                  "Res\\SKIN_CONTROL\\ENCIRCLE_BL.bmp"
+IDB_USER_WHISPER_TR     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_TR.bmp"
+IDB_USER_WHISPER_TM     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_TM.bmp"
+IDB_USER_WHISPER_TL     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_TL.bmp"
+IDB_USER_WHISPER_MR     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_MR.bmp"
+IDB_USER_WHISPER_ML     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_ML.bmp"
+IDB_USER_WHISPER_BR     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_BR.bmp"
+IDB_USER_WHISPER_BM     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_BM.bmp"
+IDB_USER_WHISPER_BL     BITMAP                  "Res\\PLAZA_WHISPER\\USER_WHISPER_BL.bmp"
+IDB_PLAZA_USER_LIST_TR  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_TR.bmp"
+IDB_PLAZA_USER_LIST_TM  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_TM.bmp"
+IDB_PLAZA_USER_LIST_TL  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_TL.bmp"
+IDB_PLAZA_USER_LIST_MR  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_MR.bmp"
+IDB_PLAZA_USER_LIST_ML  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_ML.bmp"
+IDB_PLAZA_USER_LIST_BR  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_BR.bmp"
+IDB_PLAZA_USER_LIST_BM  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_BM.bmp"
+IDB_PLAZA_USER_LIST_BL  BITMAP                  "Res\\PLAZA_USER\\USER_LIST_BL.bmp"
+IDB_PLAZA_USER_INFO_R   BITMAP                  "Res\\PLAZA_USER_INFO\\USER_INFO_R.bmp"
+IDB_PLAZA_USER_INFO_M   BITMAP                  "Res\\PLAZA_USER_INFO\\USER_INFO_M.bmp"
+IDB_PLAZA_USER_INFO_L   BITMAP                  "Res\\PLAZA_USER_INFO\\USER_INFO_L.bmp"
+IDB_PLAZA_TABLE_TR      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_TR.bmp"
+IDB_PLAZA_TABLE_TM      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_TM.bmp"
+IDB_PLAZA_TABLE_TL      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_TL.bmp"
+IDB_PLAZA_TABLE_MR      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_MR.bmp"
+IDB_PLAZA_TABLE_ML      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_ML.bmp"
+IDB_PLAZA_TABLE_BR      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_BR.bmp"
+IDB_PLAZA_TABLE_BM      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_BM.bmp"
+IDB_PLAZA_TABLE_BL      BITMAP                  "Res\\PLAZA_TABLE\\TABLE_BL.bmp"
+IDB_PLAZA_SERVER_TR     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_TR.bmp"
+IDB_PLAZA_SERVER_TM     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_TM.bmp"
+IDB_PLAZA_SERVER_TL     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_TL.bmp"
+IDB_PLAZA_SERVER_MR     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_MR.bmp"
+IDB_PLAZA_SERVER_ML     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_ML.bmp"
+IDB_PLAZA_SERVER_BR     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_BR.bmp"
+IDB_PLAZA_SERVER_BM     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_BM.bmp"
+IDB_PLAZA_SERVER_BL     BITMAP                  "Res\\PLAZA_SERVER\\SERVER_BL.bmp"
+IDB_INPUT_WHISPER_TR    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_TR.bmp"
+IDB_INPUT_WHISPER_TM    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_TM.bmp"
+IDB_INPUT_WHISPER_TL    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_TL.bmp"
+IDB_INPUT_WHISPER_MR    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_MR.bmp"
+IDB_INPUT_WHISPER_ML    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_ML.bmp"
+IDB_INPUT_WHISPER_BR    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_BR.bmp"
+IDB_INPUT_WHISPER_BM    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_BM.bmp"
+IDB_INPUT_WHISPER_BL    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_BL.bmp"
+IDB_PLAZA_FRAME_TR      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_TR.bmp"
+IDB_PLAZA_FRAME_TM      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_TM.bmp"
+IDB_PLAZA_FRAME_TL      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_TL.bmp"
+IDB_PLAZA_FRAME_MR      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_MR.bmp"
+IDB_PLAZA_FRAME_ML      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_ML.bmp"
+IDB_PLAZA_FRAME_BR      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_BR.bmp"
+IDB_PLAZA_FRAME_BM      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_BM.bmp"
+IDB_PLAZA_FRAME_BL      BITMAP                  "Res\\PLAZA_FRAME\\FRAME_BL.bmp"
+IDB_BT_PLAZA_FRAME_MIN  BITMAP                  "Res\\PLAZA_FRAME\\BT_MIN.bmp"
+IDB_BT_PLAZA_FRAME_CLOSE BITMAP                  "Res\\PLAZA_FRAME\\BT_CLOSE.bmp"
+IDB_BT_PLAZA_FRAME_OPTION BITMAP                  "Res\\PLAZA_FRAME\\BT_OPTION.bmp"
+IDB_BT_PLAZA_FRAME_BANK BITMAP                  "Res\\PLAZA_FRAME\\BT_BANK.bmp"
+IDB_BT_PLAZA_FRAME_BASE_ENSURE BITMAP                  "Res\\PLAZA_FRAME\\BT_BASE_ENSURE.bmp"
+IDB_BT_SHOW_GAME_LIST   BITMAP                  "Res\\PLAZA_FRAME\\BT_SHOW_GAME_LIST.bmp"
+IDB_BT_HIDE_GAME_LIST   BITMAP                  "Res\\PLAZA_FRAME\\BT_HIDE_GAME_LIST.bmp"
+IDB_CHAT_WHISPER_TR     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_TR.bmp"
+IDB_CHAT_WHISPER_TM     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_TM.bmp"
+IDB_CHAT_WHISPER_TL     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_TL.bmp"
+IDB_CHAT_WHISPER_MR     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_MR.bmp"
+IDB_CHAT_WHISPER_ML     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_ML.bmp"
+IDB_CHAT_WHISPER_BR     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_BR.bmp"
+IDB_CHAT_WHISPER_BM     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_BM.bmp"
+IDB_CHAT_WHISPER_BL     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_BL.bmp"
+IDB_PLAZA_CHAT_TR       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_TR.bmp"
+IDB_PLAZA_CHAT_TM       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_TM.bmp"
+IDB_PLAZA_CHAT_TL       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_TL.bmp"
+IDB_PLAZA_CHAT_MR       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_MR.bmp"
+IDB_PLAZA_CHAT_ML       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_ML.bmp"
+IDB_PLAZA_CHAT_CONTROL_BACK BITMAP                  "Res\\PLAZA_CHAT\\CHAT_CONTROL_BACK.bmp"
+IDB_PLAZA_CHAT_BR       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_BR.bmp"
+IDB_PLAZA_CHAT_BM       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_BM.bmp"
+IDB_PLAZA_CHAT_BL       BITMAP                  "Res\\PLAZA_CHAT\\CHAT_BL.bmp"
+IDB_BT_WHISPER_SEND_CONTROL BITMAP                  "Res\\PLAZA_WHISPER\\BT_WHISPER_SEND_CONTROL.bmp"
+IDB_BT_WHISPER_MORE_FUNCTION BITMAP                  "Res\\PLAZA_WHISPER\\BT_WHISPER_MORE_FUNCTION.bmp"
+IDB_BT_WHISPER_LEAVE_CHAT BITMAP                  "Res\\PLAZA_WHISPER\\BT_WHISPER_LEAVE_CHAT.bmp"
+IDB_BT_WHISPER_EXPESSION BITMAP                  "Res\\PLAZA_WHISPER\\BT_WHISPER_EXPESSION.bmp"
+IDB_BT_WHISPER_COLOR_SET BITMAP                  "Res\\PLAZA_WHISPER\\BT_WHISPER_COLOR_SET.bmp"
+IDB_BT_WHISPER_CLEAN_SCREEN BITMAP                  "Res\\PLAZA_WHISPER\\BT_WHISPER_CLEAN_SCREEN.bmp"
+IDB_BT_WHISPER_ADD_USER BITMAP                  "Res\\PLAZA_WHISPER\\BT_WHISPER_ADD_USER.bmp"
+IDB_BT_PLAZA_BROWSER_STOP BITMAP                  "Res\\PLAZA_BROWSER\\BT_STOP.bmp"
+IDB_BT_PLAZA_BROWSER_RELOAD BITMAP                  "Res\\PLAZA_BROWSER\\BT_RELOAD.bmp"
+IDB_BT_PLAZA_BROWSER_NEXT BITMAP                  "Res\\PLAZA_BROWSER\\BT_NEXT.bmp"
+IDB_BT_PLAZA_BROWSER_LAST BITMAP                  "Res\\PLAZA_BROWSER\\BT_LAST.bmp"
+IDB_BT_PLAZA_BROWSER_HOME BITMAP                  "Res\\PLAZA_BROWSER\\BT_HOME.bmp"
+IDB_BT_TABLE_FRAME_VIEW_MODE BITMAP                  "Res\\PLAZA_TABLE\\BT_VIEW_MODE.bmp"
+IDB_BT_SHOW_USER_LIST   BITMAP                  "Res\\PLAZA_USER\\BT_SHOW_USER_LIST.bmp"
+IDB_BT_HIDE_USER_LIST   BITMAP                  "Res\\PLAZA_USER\\BT_HIDE_USER_LIST.bmp"
+IDB_BT_NORMAL_USER_ACTIVE BITMAP                  "Res\\PLAZA_USER\\BT_NORMAL_USER_ACTIVE.bmp"
+IDB_BT_PLAZA_USER_INFO_MENU BITMAP                  "Res\\PLAZA_USER_INFO\\BT_USER_INFO_MENU.bmp"
+IDB_BT_CUSTOM_USER_NORMAL BITMAP                  "Res\\PLAZA_USER\\BT_CUSTOM_USER_NORMAL.bmp"
+IDB_BT_PLAZA_CHAT_SEND_CHAT BITMAP                  "Res\\PLAZA_CHAT\\BT_SEND_CHAT.bmp"
+IDB_BT_TABLE_FRAME_SEARCH_USER BITMAP                  "Res\\PLAZA_TABLE\\BT_SEARCH_USER.bmp"
+IDB_BT_PLAZA_CHAT_SAVE_CHAT BITMAP                  "Res\\PLAZA_CHAT\\BT_SAVE_CHAT.bmp"
+IDB_BT_TABLE_FRAME_QUIT_GAME BITMAP                  "Res\\PLAZA_TABLE\\BT_QUIT_GAME.bmp"
+IDB_BT_PLAZA_CHAT_PHRASE BITMAP                  "Res\\PLAZA_CHAT\\BT_PHRASE.bmp"
+IDB_BT_PLAZA_CHAT_BUGLE BITMAP                  "Res\\PLAZA_CHAT\\BT_BUGLE.bmp"
+IDB_BT_TABLE_FRAME_JOIN_MENU BITMAP                  "Res\\PLAZA_TABLE\\BT_JOIN_MENU.bmp"
+IDB_BT_FRAME_ITEM_NORMAL BITMAP                  "Res\\PLAZA_FRAME\\BT_ITEM_NORMAL.bmp"
+IDB_BT_FRAME_ITEM_AVTIVE BITMAP                  "Res\\PLAZA_FRAME\\BT_ITEM_AVTIVE.bmp"
+IDB_BT_CUSTOM_USER_ACTIVE BITMAP                  "Res\\PLAZA_USER\\BT_CUSTOM_USER_ACTIVE.bmp"
+IDB_BT_NORMAL_USER_NORMAL BITMAP                  "Res\\PLAZA_USER\\BT_NORMAL_USER_NORMAL.bmp"
+IDB_BT_PLAZA_CHAT_EXPESSION BITMAP                  "Res\\PLAZA_CHAT\\BT_EXPESSION.bmp"
+IDB_BT_PLAZA_CHAT_COLOR_SET BITMAP                  "Res\\PLAZA_CHAT\\BT_COLOR_SET.bmp"
+IDB_BT_PLAZA_CHAT_CLEAN_SCREEN BITMAP                  "Res\\PLAZA_CHAT\\BT_CLEAN_SCREEN.bmp"
+IDB_BT_PLAZA_CHAT_CHAT_SHORT BITMAP                  "Res\\PLAZA_CHAT\\BT_CHAT_SHORT.bmp"
+IDB_BT_PLAZA_CHAT_CONTROL BITMAP                  "Res\\PLAZA_CHAT\\BT_CHAT_CONTROL.bmp"
+IDB_BT_PLAZA_CHAT_CLOSE BITMAP                  "Res\\PLAZA_CHAT\\BT_CHAT_CLOSE.bmp"
+IDB_PLAZA_BROWSER_TR    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_TR.bmp"
+IDB_PLAZA_BROWSER_TM    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_TM.bmp"
+IDB_PLAZA_BROWSER_TL    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_TL.bmp"
+IDB_PLAZA_BROWSER_MR    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_MR.bmp"
+IDB_PLAZA_BROWSER_ML    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_ML.bmp"
+IDB_PLAZA_BROWSER_BR    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_BR.bmp"
+IDB_PLAZA_BROWSER_BM    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_BM.bmp"
+IDB_PLAZA_BROWSER_BL    BITMAP                  "Res\\PLAZA_BROWSER\\BROWSER_BL.bmp"
+IDB_BT_TABLE_FRAME_AUTO_JOIN BITMAP                  "Res\\PLAZA_TABLE\\BT_AUTO_JOIN.bmp"
+IDB_PLAZA_TABLE_INVALID BITMAP                  "Res\\PLAZA_TABLE\\TABLE_INVALID.bmp"
+IDB_PLAZA_TABLE_GROUND  BITMAP                  "Res\\PLAZA_TABLE\\TABLE_GROUND.bmp"
+IDB_COLLOCATE_BAR       BITMAP                  "Res\\PLAZA_OTHER\\COLLOCATE_BAR.bmp"
+IDB_BT_TABLE_FRAME_CALL_MASTER BITMAP                  "Res\\PLAZA_TABLE\\BT_CALL_MASTER.bmp"
+IDB_SKIN_PREVIEW        BITMAP                  "Res\\SKIN_PREVIEW.bmp"
+IDB_SKIN_COMBOBOX_THUMB BITMAP                  "Res\\SKIN_CONTROL\\SKIN_COMBOBOX_THUMB.bmp"
+IDB_SKIN_SCROLL         BITMAP                  "Res\\SKIN_CONTROL\\SKIN_SCROLL.bmp"
+IDB_BT_TABLE_FRAME_SERVER_MANAGE BITMAP                  "Res\\PLAZA_TABLE\\BT_SERVER_MANAGE.bmp"
+IDB_BT_PLAZA_FRAME_MAX  BITMAP                  "Res\\PLAZA_FRAME\\BT_MAX.bmp"
+IDB_BT_PLAZA_FRAME_RESORE BITMAP                  "Res\\PLAZA_FRAME\\BT_RESORE.bmp"
+IDB_SAFE_BIND           BITMAP                  "Res\\PLAZA_FRAME\\BT_BIND.bmp"
+IDB_SAFE_PROMPT         BITMAP                  "Res\\PLAZA_FRAME\\BT_PROTECT.bmp"
+IDB_ITEM_FRAME_BL       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_BL.bmp"
+IDB_ITEM_FRAME_BM       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_BM.bmp"
+IDB_ITEM_FRAME_BR       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_BR.bmp"
+IDB_ITEM_FRAME_ML       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_ML.bmp"
+IDB_ITEM_FRAME_MR       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_MR.bmp"
+IDB_ITEM_FRAME_TL       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_TL.bmp"
+IDB_ITEM_FRAME_TM       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_TM.bmp"
+IDB_ITEM_FRAME_TR       BITMAP                  "Res\\ITEM_FRAME\\ITEM_FRAME_TR.bmp"
+IDB_BT_PLAZA_CHAT_STOP_CHAT BITMAP                  "Res\\PLAZA_CHAT\\BT_STOP_CHAT.bmp"
+IDB_BT_PLAZA_CHAT_RECV_CHAT BITMAP                  "Res\\PLAZA_CHAT\\BT_RECV_CHAT.bmp"
+IDB_BT_USER_COMPETITION BITMAP                  "Res\\PLAZA_USER\\BT_USER_COMPETITION.bmp"
+IDB_MEMBER_SERVICE_BAR  BITMAP                  "Res\\PLAZA_OTHER\\MEMBER_SERVICE_BAR.bmp"
+IDB_USER_SERVICE_BAR    BITMAP                  "Res\\PLAZA_OTHER\\USER_SERVICE_BAR.bmp"
+IDB_GAME_FRAME_BL       BITMAP                  "Res\\GAME_FRAME\\FRAME_BL.bmp"
+IDB_GAME_FRAME_BM       BITMAP                  "Res\\GAME_FRAME\\FRAME_BM.bmp"
+IDB_GAME_FRAME_BR       BITMAP                  "Res\\GAME_FRAME\\FRAME_BR.bmp"
+IDB_GAME_FRAME_ML       BITMAP                  "Res\\GAME_FRAME\\FRAME_ML.bmp"
+IDB_GAME_FRAME_MR       BITMAP                  "Res\\GAME_FRAME\\FRAME_MR.bmp"
+IDB_GAME_FRAME_TL       BITMAP                  "Res\\GAME_FRAME\\FRAME_TL.bmp"
+IDB_GAME_FRAME_TM       BITMAP                  "Res\\GAME_FRAME\\FRAME_TM.bmp"
+IDB_GAME_FRAME_TR       BITMAP                  "Res\\GAME_FRAME\\FRAME_TR.bmp"
+IDB_GAME_FRAME_BT_MAX   BITMAP                  "Res\\GAME_FRAME\\BT_MAX.bmp"
+IDB_GAME_FRAME_BT_MIN   BITMAP                  "Res\\GAME_FRAME\\BT_MIN.bmp"
+IDB_GAME_FRAME_BT_CLOSE BITMAP                  "Res\\GAME_FRAME\\BT_CLOSE.bmp"
+IDB_GAME_FRAME_BT_RESORE BITMAP                  "Res\\GAME_FRAME\\BT_RESORE.bmp"
+IDB_BT_PLAZA_FRAME_NAVIGATION_1 BITMAP                  "Res\\PLAZA_FRAME\\BT_NAVIGATION_1.bmp"
+IDB_BT_PLAZA_FRAME_NAVIGATION_2 BITMAP                  "Res\\PLAZA_FRAME\\BT_NAVIGATION_2.bmp"
+IDB_BT_PLAZA_FRAME_NAVIGATION_3 BITMAP                  "Res\\PLAZA_FRAME\\BT_NAVIGATION_3.bmp"
+IDB_BT_PLAZA_FRAME_NAVIGATION_4 BITMAP                  "Res\\PLAZA_FRAME\\BT_NAVIGATION_4.bmp"
+IDB_BT_PLAZA_FRAME_NAVIGATION_5 BITMAP                  "Res\\PLAZA_FRAME\\BT_NAVIGATION_5.bmp"
+IDB_GAME_USER_LIST_BL   BITMAP                  "Res\\GAME_USER\\USER_LIST_BL.bmp"
+IDB_GAME_USER_LIST_BM   BITMAP                  "Res\\GAME_USER\\USER_LIST_BM.bmp"
+IDB_GAME_USER_LIST_BR   BITMAP                  "Res\\GAME_USER\\USER_LIST_BR.bmp"
+IDB_GAME_USER_LIST_ML   BITMAP                  "Res\\GAME_USER\\USER_LIST_ML.bmp"
+IDB_GAME_USER_LIST_MR   BITMAP                  "Res\\GAME_USER\\USER_LIST_MR.bmp"
+IDB_GAME_USER_LIST_TL   BITMAP                  "Res\\GAME_USER\\USER_LIST_TL.bmp"
+IDB_GAME_USER_LIST_TM   BITMAP                  "Res\\GAME_USER\\USER_LIST_TM.bmp"
+IDB_GAME_USER_LIST_TR   BITMAP                  "Res\\GAME_USER\\USER_LIST_TR.bmp"
+IDB_BT_GAME_CHAT_BUGLE  BITMAP                  "Res\\GAME_CHAT\\BT_BUGLE.bmp"
+IDB_BT_GAME_CHAT_STOP_CHAT BITMAP                  "Res\\GAME_CHAT\\BT_STOP_CHAT.bmp"
+IDB_BT_GAME_CHAT_RECV_CHAT BITMAP                  "Res\\GAME_CHAT\\BT_RECV_CHAT.bmp"
+IDB_BT_GAME_CHAT_SEND_CHAT BITMAP                  "Res\\GAME_CHAT\\BT_SEND_CHAT.bmp"
+IDB_BT_GAME_CHAT_SAVE_CHAT BITMAP                  "Res\\GAME_CHAT\\BT_SAVE_CHAT.bmp"
+IDB_BT_GAME_CHAT_PHRASE BITMAP                  "Res\\GAME_CHAT\\BT_PHRASE.bmp"
+IDB_BT_GAME_CHAT_EXPESSION BITMAP                  "Res\\GAME_CHAT\\BT_EXPESSION.bmp"
+IDB_BT_GAME_CHAT_CONTROL BITMAP                  "Res\\GAME_CHAT\\BT_CHAT_CONTROL.bmp"
+IDB_BT_GAME_CHAT_COLOR_SET BITMAP                  "Res\\GAME_CHAT\\BT_COLOR_SET.bmp"
+IDB_BT_GAME_CHAT_CLOSE  BITMAP                  "Res\\GAME_CHAT\\BT_CHAT_CLOSE.bmp"
+IDB_BT_GAME_CHAT_CLEAN_SCREEN BITMAP                  "Res\\GAME_CHAT\\BT_CLEAN_SCREEN.bmp"
+IDB_BT_GAME_CHAT_CHAT_SHORT BITMAP                  "Res\\GAME_CHAT\\BT_CHAT_SHORT.bmp"
+IDB_GAME_CHAT_CONTROL_BACK BITMAP                  "Res\\GAME_CHAT\\CHAT_CONTROL_BACK.bmp"
+IDB_BT_GAME_CHAT_MORE_FUNCTION BITMAP                  "Res\\GAME_CHAT\\BT_MORE_FUNCTION.bmp"
+IDB_BT_PLAZA_CHAT_MORE_FUNCTION BITMAP                  "Res\\PLAZA_CHAT\\BT_MORE_FUNCTION.bmp"
+IDB_GAME_CHAT_BL        BITMAP                  "Res\\GAME_CHAT\\CHAT_BL.bmp"
+IDB_GAME_CHAT_BM        BITMAP                  "Res\\GAME_CHAT\\CHAT_BM.bmp"
+IDB_GAME_CHAT_BR        BITMAP                  "Res\\GAME_CHAT\\CHAT_BR.bmp"
+IDB_GAME_CHAT_ML        BITMAP                  "Res\\GAME_CHAT\\CHAT_ML.bmp"
+IDB_GAME_CHAT_MR        BITMAP                  "Res\\GAME_CHAT\\CHAT_MR.bmp"
+IDB_GAME_CHAT_TL        BITMAP                  "Res\\GAME_CHAT\\CHAT_TL.bmp"
+IDB_GAME_CHAT_TM        BITMAP                  "Res\\GAME_CHAT\\CHAT_TM.bmp"
+IDB_GAME_CHAT_TR        BITMAP                  "Res\\GAME_CHAT\\CHAT_TR.bmp"
+IDB_GAME_USER_LIST_H_TR BITMAP                  "Res\\GAME_USER\\USER_LIST_H_TR.bmp"
+IDB_GAME_USER_LIST_H_TM BITMAP                  "Res\\GAME_USER\\USER_LIST_H_TM.bmp"
+IDB_GAME_USER_LIST_H_TL BITMAP                  "Res\\GAME_USER\\USER_LIST_H_TL.bmp"
+IDB_GAME_USER_LIST_H_MR BITMAP                  "Res\\GAME_USER\\USER_LIST_H_MR.bmp"
+IDB_GAME_USER_LIST_H_ML BITMAP                  "Res\\GAME_USER\\USER_LIST_H_ML.bmp"
+IDB_GAME_USER_LIST_H_BR BITMAP                  "Res\\GAME_USER\\USER_LIST_H_BR.bmp"
+IDB_GAME_USER_LIST_H_BM BITMAP                  "Res\\GAME_USER\\USER_LIST_H_BM.bmp"
+IDB_GAME_USER_LIST_H_BL BITMAP                  "Res\\GAME_USER\\USER_LIST_H_BL.bmp"
+IDB_GAME_CHAT_H_TR      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_TR.bmp"
+IDB_GAME_CHAT_H_TM      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_TM.bmp"
+IDB_GAME_CHAT_H_TL      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_TL.bmp"
+IDB_GAME_CHAT_H_MR      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_MR.bmp"
+IDB_GAME_CHAT_H_ML      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_ML.bmp"
+IDB_GAME_CHAT_H_BR      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_BR.bmp"
+IDB_GAME_CHAT_H_BM      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_BM.bmp"
+IDB_GAME_CHAT_H_BL      BITMAP                  "Res\\GAME_CHAT\\CHAT_H_BL.bmp"
+IDB_GAME_USER_INFO_BL   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_BL.bmp"
+IDB_GAME_USER_INFO_BM   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_BM.bmp"
+IDB_GAME_USER_INFO_BR   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_BR.bmp"
+IDB_GAME_USER_INFO_ML   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_ML.bmp"
+IDB_GAME_USER_INFO_MR   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_MR.bmp"
+IDB_GAME_USER_INFO_TL   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_TL.bmp"
+IDB_GAME_USER_INFO_TM   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_TM.bmp"
+IDB_GAME_USER_INFO_TR   BITMAP                  "Res\\GAME_USER_INFO\\USER_INFO_TR.bmp"
+IDB_GAME_BILL_L         BITMAP                  "Res\\GAME_BILL\\BILL_L.bmp"
+IDB_GAME_BILL_M         BITMAP                  "Res\\GAME_BILL\\BILL_M.bmp"
+IDB_GAME_BILL_R         BITMAP                  "Res\\GAME_BILL\\BILL_R.bmp"
+IDB_BT_HIDE_GAME_BILL   BITMAP                  "Res\\GAME_BILL\\BT_HIDE_BILL.bmp"
+IDB_BT_SHOW_GAME_BILL   BITMAP                  "Res\\GAME_BILL\\BT_SHOW_BILL.bmp"
+IDB_BT_GAME_BAR_INVITE  BITMAP                  "res\\GAME_BAR\\BT_INVITE.bmp"
+IDB_BT_GAME_BAR_MORE    BITMAP                  "res\\GAME_BAR\\BT_MORE.bmp"
+IDB_BT_GAME_BAR_OPTION  BITMAP                  "res\\GAME_BAR\\BT_OPTION.bmp"
+IDB_BT_GAME_BAR_ALLOW_SOUND BITMAP                  "res\\GAME_BAR\\BT_ALLOW_SOUND.bmp"
+IDB_BT_GAME_BAR_HIDE_CONTROL BITMAP                  "res\\GAME_BAR\\BT_HIDE_CONTROL.bmp"
+IDB_BT_GAME_BAR_SHOW_CONTROL BITMAP                  "res\\GAME_BAR\\BT_SHOW_CONTROL.bmp"
+IDB_BT_GAME_BAR_LIMIT_SOUND BITMAP                  "res\\GAME_BAR\\BT_LIMIT_SOUND.bmp"
+IDB_GAME_BAR            BITMAP                  "res\\GAME_BAR\\GAME_BAR.bmp"
+IDB_BT_TABLE_FRAME_SECRET_TABLE BITMAP                  "res\\PLAZA_TABLE\\BT_SECRET_TABLE.bmp"
+IDB_PLAZA_TABLE_NUMBER  BITMAP                  "res\\PLAZA_TABLE\\TABLE_NUMBER.bmp"
+IDB_BT_PLAZA_FRAME_COMPANION BITMAP                  "res\\PLAZA_FRAME\\BT_COMPANION.bmp"
+IDB_BT_PLAZA_FRAME_SYSTEM_AFFICHE BITMAP                  "res\\PLAZA_FRAME\\BT_SYSTEM_AFFICHE.bmp"
+IDB_BT_PLAZA_FRAME_BUG_REPORT BITMAP                  "res\\PLAZA_FRAME\\BT_BUG_REPORT.bmp"
+IDB_BT_TABLE_FRAME_UNSECRET_TABLE BITMAP                  "res\\PLAZA_TABLE\\BT_UNSECRET_TABLE.bmp"
+IDB_BUGLE_COLOR_SET     BITMAP                  "res\\BUGLE_IMAGE\\BT_COLOR_SET.bmp"
+IDB_BUGLE_EXPRESSION    BITMAP                  "res\\BUGLE_IMAGE\\BT_EXPRESSION.bmp"
+IDB_DOWNLOAD_LOAD_LAST  BITMAP                  "res\\DOWN_LOAD\\BT_DOWN_LOAD_LAST.bmp"
+IDB_DOWNLOAD_LOAD_NEXT  BITMAP                  "res\\DOWN_LOAD\\BT_DOWN_LOAD_NEXT.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND_CUR            CURSOR                  "Res\\HAND_CUR.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SKIN_ICON           ICON                    "Res\\SKIN_CONTROL\\SKIN_ICON.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+COLLOCATE_BAR_BT        PNG                     "Res\\PLAZA_OTHER\\COLLOCATE_BAR_BT.PNG"
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "Res\SkinResource.rc2"  // 不是由 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

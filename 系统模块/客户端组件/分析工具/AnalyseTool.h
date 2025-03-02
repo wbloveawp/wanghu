@@ -1,0 +1,32 @@
+﻿#pragma once
+
+#include "Resource.h"
+
+//////////////////////////////////////////////////////////////////////////
+
+//应用程序
+class CAnalyseToolApp : public CWinApp
+{
+	//变量定义
+protected:
+
+	//函数定义
+public:
+	//构造函数
+	CAnalyseToolApp();
+	//接口查询
+	virtual VOID* QueryInterface(REFGUID Guid, DWORD dwQueryVer);
+	//重载函数
+public:
+	//退出函数
+	virtual INT ExitInstance();
+	//创建函数
+	virtual BOOL InitInstance();	
+};
+
+//////////////////////////////////////////////////////////////////////////
+
+//对象说明
+extern CAnalyseToolApp theApp;
+
+//////////////////////////////////////////////////////////////////////////

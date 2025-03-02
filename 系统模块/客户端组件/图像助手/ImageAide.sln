@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ÕºœÒ÷˙ ÷", "ImageAide.vcxproj", "{9E27484B-E399-4469-89E4-FF0FF34E233E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E27484B-E399-4469-89E4-FF0FF34E233E}.Debug|x86.ActiveCfg = Debug|Win32
+		{9E27484B-E399-4469-89E4-FF0FF34E233E}.Release|x86.ActiveCfg = Release|Win32
+		{9E27484B-E399-4469-89E4-FF0FF34E233E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00E90F57-38BF-44EE-8BA6-6ED751CE1E01}
+	EndGlobalSection
+EndGlobal

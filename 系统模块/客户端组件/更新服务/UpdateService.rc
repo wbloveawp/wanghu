@@ -1,0 +1,193 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\UpdateService.rc2""  // 不是由 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 8,1,0,1
+ PRODUCTVERSION 8,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", ""
+            VALUE "CompanyName", ""
+            VALUE "FileDescription", "下载组件"
+            VALUE "FileVersion", "8, 1, 0, 1"
+            VALUE "InternalName", "UpdateService.dll"
+            VALUE "LegalCopyright", ""
+            VALUE "OriginalFilename", "UpdateService.dll"
+            VALUE "ProductName", "下载组件"
+            VALUE "ProductVersion", "8, 1, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_DOWNLOAD DIALOGEX 0, 0, 393, 160
+STYLE DS_SYSMODAL | DS_SETFONT | DS_CENTER | WS_POPUP | WS_CLIPCHILDREN | 
+    WS_SYSMENU
+FONT 9, "宋体", 400, 0, 0x86
+BEGIN
+    PUSHBUTTON      "",IDC_LAST,16,115,19,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_NEXT,43,115,19,14,WS_DISABLED
+    PUSHBUTTON      "再次重试",IDC_RETRY_AGAIN,133,132,44,14,WS_DISABLED
+    PUSHBUTTON      "取消更新",IDC_CANCEL_ONE,184,132,44,14,WS_DISABLED
+    PUSHBUTTON      "全部取消",IDCANCEL,235,132,44,14
+    LTEXT           "若游戏无法下载,点此处下载最新安装包",IDC_DOWNLOAD_LINK,
+                    73,115,145,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DOWNLOAD            ICON                    "Res\\Download.ico"
+IDI_DOWN_LOAD           ICON                    "Res\\DownLoad.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND_CUR            CURSOR                  "res\\HAND_CUR.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_DOWNLOAD, DIALOG
+    BEGIN
+        RIGHTMARGIN, 389
+        BOTTOMMARGIN, 157
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DOWN_LOAD_ITEM      BITMAP                  "res\\DOWN_LOAD\\DOWN_LOAD_ITEM.bmp"
+IDB_BT_DOWN_LOAD_NEXT   BITMAP                  "res\\DOWN_LOAD\\BT_DOWN_LOAD_NEXT.bmp"
+IDB_BT_DOWN_LOAD_LAST   BITMAP                  "res\\DOWN_LOAD\\BT_DOWN_LOAD_LAST.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+DOWN_LOAD_SCALE         PNG                     "res\\DOWN_LOAD\\DOWN_LOAD_SCALE.png"
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\UpdateService.rc2"  // 不是由 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "监控服务器", "MonitorServer.vcxproj", "{D838B9D8-CBDF-48A8-BA89-747D01F69F49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D838B9D8-CBDF-48A8-BA89-747D01F69F49}.Debug|x64.ActiveCfg = Debug|x64
+		{D838B9D8-CBDF-48A8-BA89-747D01F69F49}.Debug|x64.Build.0 = Debug|x64
+		{D838B9D8-CBDF-48A8-BA89-747D01F69F49}.Release|x64.ActiveCfg = Release|x64
+		{D838B9D8-CBDF-48A8-BA89-747D01F69F49}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DE4E175-702B-48DB-9CEC-3B410D722635}
+	EndGlobalSection
+EndGlobal

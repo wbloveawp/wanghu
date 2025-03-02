@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "≈‰÷√∑˛ŒÒ", "ConfigService.vcxproj", "{76ABC303-CC3B-4C9E-B85E-85B16CBB646C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76ABC303-CC3B-4C9E-B85E-85B16CBB646C}.Debug|x64.ActiveCfg = Debug|x64
+		{76ABC303-CC3B-4C9E-B85E-85B16CBB646C}.Debug|x64.Build.0 = Debug|x64
+		{76ABC303-CC3B-4C9E-B85E-85B16CBB646C}.Release|x64.ActiveCfg = Release|x64
+		{76ABC303-CC3B-4C9E-B85E-85B16CBB646C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8514059D-2112-46E9-B95A-70EB3BEB1E46}
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

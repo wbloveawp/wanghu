@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "连接模拟", "连接模拟.vcxproj", "{9D8E7F81-2E36-4B29-B19A-609BAAF4FA56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D8E7F81-2E36-4B29-B19A-609BAAF4FA56}.Debug|x64.ActiveCfg = Debug|x64
+		{9D8E7F81-2E36-4B29-B19A-609BAAF4FA56}.Debug|x64.Build.0 = Debug|x64
+		{9D8E7F81-2E36-4B29-B19A-609BAAF4FA56}.Release|x64.ActiveCfg = Release|x64
+		{9D8E7F81-2E36-4B29-B19A-609BAAF4FA56}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3733CA9-39CB-4091-ABF4-5B5D0DADCC42}
+	EndGlobalSection
+EndGlobal
