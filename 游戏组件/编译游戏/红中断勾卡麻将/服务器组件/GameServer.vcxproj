@@ -266,7 +266,7 @@ copy /y ..\..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
@@ -328,12 +328,12 @@ copy /y ..\..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CLog.cpp" />
     <ClCompile Include="DlgCustomRule.cpp" />
-    <ClCompile Include="GameLogic.cpp" />
     <ClCompile Include="GameServer.cpp" />
     <ClCompile Include="GameServerManager.cpp" />
     <ClCompile Include="HistoryScore.cpp" />
+    <ClCompile Include="logic.cpp" />
+    <ClCompile Include="operator_logic_u2.cpp" />
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugVD|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Create</PrecompiledHeader>
@@ -349,12 +349,13 @@ copy /y ..\..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\消息定义\CMD_HongZhongDGK.h" />
     <ClInclude Include="..\消息定义\CMD_Sparrow.h" />
-    <ClInclude Include="CLog.h" />
     <ClInclude Include="DlgCustomRule.h" />
-    <ClInclude Include="GameLogic.h" />
     <ClInclude Include="GameServerManager.h" />
     <ClInclude Include="HistoryScore.h" />
+    <ClInclude Include="logic.h" />
+    <ClInclude Include="operator_logic_u2.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="TableFrameSink.h" />

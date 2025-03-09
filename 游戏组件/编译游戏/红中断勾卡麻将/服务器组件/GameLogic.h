@@ -47,7 +47,6 @@ enum class e_user_action {
 	e_chupai = 0x01
 };
 
-
 class CGameLogic
 {
 	using card_vector = std::vector<carder> ;

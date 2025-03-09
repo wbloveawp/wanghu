@@ -1,7 +1,7 @@
 #include "StdAfx.h"
 #include "TableFrameSink.h"
 #include <locale>
-#include "CLog.h"
+
 //////////////////////////////////////////////////////////////////////////
 //
 #define LOG_TABLE(...) LOG_DEBUG(L"桌子号:",m_pITableFrame->GetTableID(),##__VA_ARGS__)
@@ -77,38 +77,12 @@ CTableFrameSink::CTableFrameSink()
 	//随机种子
 	srand((int)time(0));
 
-
-	//游戏视频
-	m_hVideoInst = NULL;
-	m_pGameVideo = NULL;
-	m_hVideoInst = LoadLibrary(TEXT("sparrowhzdgkVideo.dll"));
-	if (m_hVideoInst)
-	{
-		typedef void* (*CREATE)();
-		CREATE GameVideo = (CREATE)GetProcAddress(m_hVideoInst, "CreateGameVideo");
-		if (GameVideo)
-		{
-			m_pGameVideo = static_cast<IGameVideo*>(GameVideo());
-		}
-	}
-
 	return;
 }
 
 //析构函数
 CTableFrameSink::~CTableFrameSink(void)
 {
-	if (m_pGameVideo)
-	{
-		delete m_pGameVideo;
-		m_pGameVideo = NULL;
-	}
-
-	if (m_hVideoInst)
-	{
-		FreeLibrary(m_hVideoInst);
-		m_hVideoInst = NULL;
-	}
 }
 
 //接口查询
@@ -150,10 +124,10 @@ bool  CTableFrameSink::InitTableFrameSink(IUnknownEx* pIUnknownEx)
 	m_cbTrusteeDelayTime = m_pGameCustomRule->cbTrusteeDelayTime;*/
 
 	//日志
-	CString strDir = GetFileDialogPath() + TEXT("\\") + GAME_NAME + TEXT("日志");
-	CreateDirectory(strDir, NULL);
-	strDir.AppendFormat(TEXT("\\%s(%d)"), GAME_NAME, m_pITableFrame->GetGameServiceOption()->wServerID);
-	EasyLog::CLog::m_log.SetName(strDir.GetBuffer());
+	//CString strDir = GetFileDialogPath() + TEXT("\\") + GAME_NAME + TEXT("日志");
+	//CreateDirectory(strDir, NULL);
+	//strDir.AppendFormat(TEXT("\\%s(%d)"), GAME_NAME, m_pITableFrame->GetGameServiceOption()->wServerID);
+	//EasyLog::CLog::m_log.SetName(strDir.GetBuffer());
 
 	//BYTE i = m_pITableFrame->GetDataBaseMode();
 	return true;
@@ -313,15 +287,6 @@ bool CTableFrameSink::OnUserTrustee(WORD wChairID, bool bTrustee)
 	{
 		return false;
 	}
-
-	//m_bTrustee[wChairID] = bTrustee;
-
-	CMD_S_Trustee Trustee;
-	ZeroMemory(&Trustee, sizeof(Trustee));
-	Trustee.bTrustee = bTrustee;
-	Trustee.wChairID = wChairID;
-	m_pITableFrame->SendTableData(INVALID_CHAIR, SUB_S_TRUSTEE, &Trustee, sizeof(Trustee));
-	m_pITableFrame->SendLookonData(INVALID_CHAIR, SUB_S_TRUSTEE, &Trustee, sizeof(Trustee));
 
 	//删除托管定时器
 	m_pITableFrame->KillGameTimer(IDI_OUT_CARD_0 + wChairID);

@@ -18,9 +18,6 @@
     <ClCompile Include="DlgCustomRule.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GameLogic.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="GameServer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -36,7 +33,10 @@
     <ClCompile Include="TableFrameSink.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CLog.cpp">
+    <ClCompile Include="logic.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="operator_logic_u2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,9 +45,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="DlgCustomRule.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="GameLogic.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="GameServerManager.h">
@@ -65,7 +62,13 @@
     <ClInclude Include="TableFrameSink.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CLog.h">
+    <ClInclude Include="..\消息定义\CMD_HongZhongDGK.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="logic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="operator_logic_u2.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

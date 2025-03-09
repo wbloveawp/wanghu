@@ -4,10 +4,9 @@
 #pragma once
 
 #include "Stdafx.h"
-#include "GameLogic.h"
 #include "HistoryScore.h"
 #include "DlgCustomRule.h"
-#include "GameVideo.h"
+//#include "GameVideo.h"
 
 #define SCOREEX SCORE
 #pragma warning(disable : 4244)//////////////////////////////////////////////////////////////////////////
@@ -30,7 +29,7 @@ class CTableFrameSink : public ITableFrameSink, public ITableUserAction, public 
 
 	//组件变量
 protected:
-	CGameLogic						m_GameLogic;							//游戏逻辑
+
 	CHistoryScore					m_HistoryScore;							//历史成绩
 	//ITableFrame						* m_pITableFrame;						//框架接口
 	ITableFrameItem                 * m_pITableFrame;							//框架接口
@@ -41,8 +40,6 @@ protected:
 
 	//游戏视频
 protected:
-	HINSTANCE						m_hVideoInst;
-	IGameVideo*						m_pGameVideo;
 
 	//函数定义
 public:
