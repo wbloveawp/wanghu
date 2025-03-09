@@ -17,8 +17,8 @@
 #define COLOR_NUM 2
 #define MK_CARD(c,v) (((c<<4)&0xF0) | (v&0x0F))
 
-#define COLOR(c) ((c>>4)&C_WILD) 
-#define VALUE(c) (c&C_WILD)
+#define COLOR(c) ((c>>4)&0xF0) 
+#define VALUE(c) (c&0xF0)
 #define IS_WILD(c) (c==C_WILD)
 
 #define SHUNZI19	0x04
