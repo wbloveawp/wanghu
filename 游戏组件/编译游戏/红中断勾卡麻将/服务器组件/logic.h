@@ -22,6 +22,7 @@ typedef struct {
 	char		triple_num;
 	char		quadra_num;
 
+	int			final_type_num;
 	e_hu_type	final_type[e_hu_type::H_TYPE_MAX];
 
 	void*		data;
@@ -52,6 +53,7 @@ public:
 	void fill_hand_cards(mj_cards &mj);
 
 	int cards();
+	bool is_init();
 public:
 	void add_card(mj_cards& mj, const carder& cd);
 	bool del_card(mj_cards& mj, const carder& cd);

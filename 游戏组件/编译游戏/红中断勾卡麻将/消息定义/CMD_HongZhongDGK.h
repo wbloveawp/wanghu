@@ -30,23 +30,56 @@
 
 typedef unsigned char carder;
 
+
+#define HU_TYPE_NULL
+#define HU_TYPE_5DUI
+#define HU_TYPE_LONGDUI1
+#define HU_TYPE_LONGDUI2
+#define HU_TYPE_DUIDUI
+#define HU_TYPE_JIANGDUI
+#define HU_TYPE_NO19
+#define HU_TYPE_ALL19
+#define HU_TYPE_KA5
+#define HU_TYPE_TONGSE
+
+#define HU_TYPE_TIANHU
+#define HU_TYPE_DIHU
+		
+#define HU_TYPE_GANG_QIANG
+#define HU_TYPE_GANG_PAO
+#define HU_TYPE_GANG_HUA
+
+
+
 enum e_hu_type {
-	H_NULL = 0,
+	H_NULL = 0,	//平胡
 	H_5DUI = 1,
 	H_LONGDUI1,
 	H_LONGDUI2,
 	H_DUIDUI,
 	H_JDUIDUI,
+
 	H_NO19,
 	H_KA5,
 	H_ALL19,
-	H_TIANHU,
-	H_DIHU ,
 	H_TONGSE,
+
+	H_TIANHU ,
+	H_DIHU ,
+
+	H_GANG_QIANG,
+	H_GANG_PAO,
+	H_GANG_HUA,
+
+	H_BAOTING,
+	H_QINGHU,
+	H_HAIDI,
+
 	H_TYPE_MAX
 };
 
-const char str_hu_type_name[][16] = {
+
+const char str_hu_type_name[e_hu_type::H_TYPE_MAX][16] = {
 	"无",
 	"五对",
 	"龙对1",
@@ -77,13 +110,14 @@ const char str_hu_type_name[][16] = {
 #define OPT_GANG		0x08
 #define OPT_HU			0x10
 #define OPT_QINGHU		0x20
-#define OPT_BAOTING		0x40
+#define OPT_ZHUAQINGHU	0x40
+#define OPT_BAOTING		0x80
 
 #define GANG_PAO		0x01 
 #define GANG_PENG		0x02
 #define GANG_AN			0x03
 
-#define OPT_OK(o,x)		(o&x==x)
+#define OPT_OK(o,x)		((o&x)==x)
 
 
 //服务器命令
@@ -96,9 +130,14 @@ const char str_hu_type_name[][16] = {
 #define SUB_S_GANG_CARD				105									//杠
 #define SUB_S_HU_CARD				106									//胡
 #define SUB_S_QINGHU				107									//请胡
-#define SUB_S_BAOTING				108									//报听
+#define SUB_S_ZHUAQINGHU			108									//抓请胡
+#define SUB_S_BAOTING				109									//报听
 
 #define SUB_S_CONTROL_CARD			999									//控制摸牌
+
+
+#pragma   pack(1) 
+
 typedef struct {
 
 }s_sence_data_t;
@@ -113,6 +152,13 @@ typedef struct {	//游戏开始
 	
 	//char				wait_baoting;
 }s_game_start_t;
+
+
+typedef struct {
+
+	unsigned short		chair;	//
+
+}s_user_baoting_t;
 
 typedef struct {	//摸牌
 
@@ -155,9 +201,14 @@ typedef struct {
 }s_gang_t;
 
 typedef struct {
+
 	carder				cd;
 	unsigned short		chair;
 
+	int					hu_types_num;
+	e_hu_type			hu_types[e_hu_type::H_TYPE_MAX];
+
+	int					score;
 }s_hu_t;
 
 typedef struct {
@@ -175,12 +226,17 @@ typedef struct {
 #define SUB_C_HU				1005								//胡
 #define SUB_C_QINGHU			1006								//请胡
 #define SUB_C_BAOTING			1006								//报听
+#define SUB_C_ZHUAQINGHU		1007								//抓请胡
 
+//出牌
 typedef struct {
 	carder		cd;
-	char		is_baoting;	//是否报听
+	char		is_baoting;	//是否报听,首轮庄家有用
 }c_out_card_t;
 
+//其他操作均使用此数据结构
 typedef struct {
 	carder		cd;
 }c_opt_card_t;
+
+#pragma   pack() 
