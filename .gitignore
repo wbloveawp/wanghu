@@ -1,4 +1,5 @@
 #中间目录
+中间目录
 Debug
 Release
 x62
@@ -9,6 +10,7 @@ Obj
 *.ncb 
 *.user 
 *.pdb 
+*.tlog
 *.netmodule 
 *.aps 
 *.ilk 

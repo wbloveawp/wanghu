@@ -2,12 +2,12 @@
 
 CTableLogic::CTableLogic(WORD max_cycles, ITableFrameItem* pTableFrameSink)
 	:_banker(INVALID_CHAIR)
-	, _over_num(0)
-	, _total_cycles(0)
-	, _max_cycles(max_cycles)
 	, _last_cycle_banker(INVALID_CHAIR)
 	, _last_banker(INVALID_CHAIR)
 	, _table(pTableFrameSink)
+	, _base_score(1)
+	, _control_card(C_INVALID)
+	, _control_chair(INVALID_CHAIR)
 {
 }
 
@@ -30,6 +30,11 @@ void CTableLogic::new_cycle()
 	_gang_num = 0;
 	memset(_pm, 0, sizeof(_pm));
 	memset(_baoting, 0, sizeof(_baoting));
+	memset(_gang_status, 0, sizeof(_gang_status));
+	memset(_table_card_num, 0, sizeof(_table_card_num));
+	memset(_table_cards, 0, sizeof(_table_cards));
+
+
 	for (WORD i = 0; i < GAME_PLAYER; i++){
 		_logic.fill_hand_cards(_pm[i]);
 	}
@@ -229,7 +234,7 @@ bool CTableLogic::operator_out(WORD chair, carder cd, bool baoting, bool is_tmou
 		if (_opt[i] > OPT_NULL) {
 			oc.my_opt = _opt[i];
 			_table->SetGameTimer(TM_IDE_PGH, OPT_TIME_OUT, 1, 0);
-			_pass_fun = [this,i, chair](WORD chair_id, carder cder, bool is_timeout) {
+			_pass_fun = [this,i, chair,cd](WORD chair_id, carder cder, bool is_timeout) {
 				assert(i == chair_id);
 				if (chair_id != i) {
 					return;
@@ -238,6 +243,7 @@ bool CTableLogic::operator_out(WORD chair, carder cd, bool baoting, bool is_tmou
 					_table->KillGameTimer(TM_IDE_PGH);
 				}
 				_gang_status[chair] = 0;
+				_table_cards[chair][_table_card_num[chair]++] = cd;
 				change_next_banker();
 				user_take_card(_banker);
 			};
@@ -256,6 +262,7 @@ bool CTableLogic::operator_out(WORD chair, carder cd, bool baoting, bool is_tmou
 		return true;
 	}
 	_gang_status[chair] = 0;
+	_table_cards[chair][_table_card_num[chair]++] = cd;
 	change_next_banker();
 	user_take_card(_banker);
 
@@ -381,7 +388,7 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 	}
 	else {
 		//自摸
-		final_score += ( HU_ZIMO_MUL * base_score);
+		final_score += ( HU_ZIMO_MUL * _base_score);
 		_logic.del_card(_pm[chair], cd);
 		bool ok = _logic.is_hu(_pm[chair], cd);
 		if (!ok || _pm[chair].hand_num % 3 != 2) {
@@ -447,11 +454,10 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 	//计算下雨分
 	
 	//下发
-
-	_score[chair] += final_score;
+	_table->GetTableUserItem(chair)->WriteUserScore(final_score,0,0,0, ScoreType_Win);
 	for (WORD i = 0; i < GAME_PLAYER; i++) {
 		if (i != chair) {
-			_score[i] -= final_score;
+			_table->GetTableUserItem(i)->WriteUserScore(-final_score,0,0,0, ScoreType_Lose);
 		}
 	}
 	conclude_table(chair);
@@ -500,17 +506,38 @@ bool CTableLogic::operator_qinghu(WORD chair, carder cd)
 		operator_hu(chair,cd);
 	}
 	return true;
+	return true;
 }
 
 void CTableLogic::conclude_table(WORD winer)
 {
 
-	if (++_total_cycles >= _max_cycles) {
-		conclude_game();
-	}
 }
 
 void CTableLogic::conclude_game()
 {
 	_table->ConcludeGame(TEXT("ok"));
+}
+
+void CTableLogic::send_scence(IServerUserItem* su)
+{
+	s_sence_data_t sd = {};
+	WORD chair = 
+	sd.my_chair = su->GetChairID();
+	auto& mj = _pm[sd.my_chair];
+	sd.wilds = mj.wild;
+	memcpy(sd.cards, mj.hand_cards, sizeof(mj.hand_cards));
+	sd.opt = _opt[sd.my_chair];
+	sd.banker = _banker;
+
+	for (WORD i = 0; i < GAME_PLAYER; i++) {
+
+		sd.hand_num[i] = _pm[i].hand_num;
+		memcpy(sd.door_info[i], _pm[i].door_info, sizeof(_pm[i].door_info));
+		sd._baoting[i] = _baoting[i];
+		memcpy(sd._table_cards[i], _table_cards[i], sizeof(_table_cards[i]));
+	}
+	
+	_table->OnEventSendGameScene(su, &sd, sizeof(s_sence_data_t));
+
 }

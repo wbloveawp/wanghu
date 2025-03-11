@@ -6,6 +6,7 @@
 #include "Stdafx.h"
 #include "HistoryScore.h"
 #include "DlgCustomRule.h"
+#include "operator_logic_u2.h"
 //#include "GameVideo.h"
 
 #define SCOREEX SCORE
@@ -37,7 +38,7 @@ protected:
 	//tagCustomRule *					m_pGameCustomRule;						//自定规则
 
 	tagBattleCreateParam            m_BattleConfig;							// 约战配置
-
+	CTableLogic	*					_tlogic;
 	//游戏视频
 protected:
 

@@ -4,11 +4,13 @@
 #include <functional>
 
 
-#define TM_IDE_BASE_ID	10
-#define TM_IDE_BAOTING	TM_IDE_BASE_ID+1
-#define TM_IDE_PGH		TM_IDE_BASE_ID+2
-#define TM_IDE_QINGHU	TM_IDE_BASE_ID+3
-#define TM_IDE_DAIDA	TM_IDE_BASE_ID+4
+#define TM_IDE_BASE_ID		10
+#define TM_IDE_BAOTING		TM_IDE_BASE_ID+1
+#define TM_IDE_PGH			TM_IDE_BASE_ID+2
+#define TM_IDE_QINGHU		TM_IDE_BASE_ID+3
+#define TM_IDE_DAIDA		TM_IDE_BASE_ID+4
+
+#define TM_IDE_NEW_CYCLE	TM_IDE_BASE_ID+10
 
 #define STATUS_NULL		0x00 
 #define STATUS_PGH		0x01 
@@ -53,17 +55,17 @@ class CTableLogic
 	WORD				_last_cycle_banker;
 	WORD				_last_banker;
 	WORD				_over_num;
-	WORD				_total_cycles;
-	WORD				_max_cycles;
 	CLogic				_logic;
 
+	
 	mj_cards			_pm[GAME_PLAYER];
 	char				_opt[GAME_PLAYER];
 	char				_baoting[GAME_PLAYER];
 
 	char				_gang_status[GAME_PLAYER];
 
-	int					_score[GAME_PLAYER];
+	WORD				_table_card_num[GAME_PLAYER];
+	carder				_table_cards[GAME_PLAYER][__all_cards_num];
 
 	WORD				_out_num;
 	WORD				_peng_num;
@@ -80,13 +82,10 @@ class CTableLogic
 	carder				_control_card;
 	WORD				_control_chair;
 
-	int					base_score;
+	SCORE				_base_score;
 protected:
 	void		clean_opt();
 
-	void		hu_qiang_gang();
-	void		hu_fang_pao();
-	void		hu_gang_pao();
 public:
 	CTableLogic(WORD max_cycles, ITableFrameItem* pTableFrameSink);
 	virtual ~CTableLogic();
@@ -107,12 +106,17 @@ public:
 	bool operator_gang(WORD chair, carder cd);
 	bool operator_hu(WORD chair, carder cd,bool is_qinghu=false);
 	bool operator_qinghu(WORD chair, carder cd);
-	bool operator_zhuaqinghu(WORD chair, carder cd);
+	bool operator_zhuaqinghu(WORD chair, carder cd) { return  true; };
 	//bool conclude_check() { return true; };
 	//void conclude_user(WORD bk) {};
 	void conclude_table(WORD winer);
 	void conclude_game();
 
-public:
+	void send_scence(IServerUserItem* su);
+
+protected:
 	void send(WORD chair, WORD cmd, void* msg, WORD len);
+
+public:
+	void send_base_score(SCORE lbasescore) { _base_score = lbasescore; }
 };

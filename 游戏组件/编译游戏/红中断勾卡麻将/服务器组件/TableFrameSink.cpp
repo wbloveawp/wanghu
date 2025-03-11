@@ -77,6 +77,7 @@ CTableFrameSink::CTableFrameSink()
 	//随机种子
 	srand((int)time(0));
 
+	_tlogic = NULL;
 	return;
 }
 
@@ -104,12 +105,18 @@ bool  CTableFrameSink::InitTableFrameSink(IUnknownEx* pIUnknownEx)
 	if (m_pITableFrame == NULL)
 		return false;
 
+	_tlogic = new CTableLogic(1, m_pITableFrame);
+	if (_tlogic == nullptr) {
+		return false;
+	}
 	//获取参数
 	m_pGameServiceOption = m_pITableFrame->GetGameServiceOption();
 	ASSERT(m_pGameServiceOption != NULL);
 
 	//开始模式
 	m_pITableFrame->SetStartMode(StartMode_AllReady);
+
+	
 
 	//自定规则
 	//ASSERT (m_pITableFrame->GetCustomRule() != NULL);
@@ -137,45 +144,52 @@ bool  CTableFrameSink::InitTableFrameSink(IUnknownEx* pIUnknownEx)
 void  CTableFrameSink::ResetTableFrameSink()
 {
 	//游戏变量
+	CTraceService::TraceString(TEXT("ResetTableFrameSink"),TraceLevel_Normal);
 	return;
 }
 
 //最少积分
 SCOREEX CTableFrameSink::QueryLessEnterScore(WORD wChairID, IServerUserItem* pIServerUserItem)
 {
+	CTraceService::TraceString(TEXT("QueryLessEnterScore"), TraceLevel_Normal);
 	return 0;
 }
 
 //游戏开始
 bool CTableFrameSink::OnEventGameStart()
 {
-
-	//换三张，前端发牌需要10秒
-
+	CTraceService::TraceString(TEXT("OnEventGameStart"), TraceLevel_Normal);
+	_tlogic->new_cycle();
 	return true;
 }
 
 //游戏结束
 bool CTableFrameSink::OnEventGameConclude(WORD wChairID, IServerUserItem* pIServerUserItem, BYTE cbReason)
 {
+	CTraceService::TraceString(TEXT("OnEventGameConclude"), TraceLevel_Normal);
 	return true;
 }
 
 //发送场景
 bool CTableFrameSink::OnEventSendGameScene(WORD wChiarID, IServerUserItem* pIServerUserItem, BYTE cbGameStatus, bool bSendSecret)
 {
+	CTraceService::TraceString(TEXT("OnEventSendGameScene"), TraceLevel_Normal);
+	_tlogic->send_scence(pIServerUserItem);
+	//m_pITableFrame->OnEventSendGameScene()
 	return true;
 }
 
 //定时器事件
 bool CTableFrameSink::OnTimerMessage(DWORD wTimerID, WPARAM wBindParam)
 {
+	CTraceService::TraceString(TEXT("OnTimerMessage"), TraceLevel_Normal);
 	return true;
 }
 
 //游戏消息处理
 bool CTableFrameSink::OnGameMessage(WORD wSubCmdID, VOID* pDataBuffer, WORD wDataSize, IServerUserItem* pIServerUserItem)
 {
+	CTraceService::TraceString(TEXT("OnGameMessage"), TraceLevel_Normal);
 	return true;
 }
 
@@ -187,7 +201,7 @@ bool CTableFrameSink::OnFrameMessage(WORD wSubCmdID, VOID* pDataBuffer, WORD wDa
 
 bool CTableFrameSink::OnActionUserOffLine(IServerUserItem* pIServerUserItem)
 {
-
+	CTraceService::TraceString(TEXT("OnActionUserOffLine : %d"), TraceLevel_Normal, pIServerUserItem->GetUserID());
 	//金币场和金币房卡可以托管，积分房卡不托管
 	/*
 	if (((m_pGameServiceOption->wServerType & GAME_GENRE_GOLD) != 0))
@@ -216,12 +230,14 @@ bool CTableFrameSink::OnActionUserOffLine(IServerUserItem* pIServerUserItem)
 bool CTableFrameSink::OnActionUserSitDown(IServerUserItem* pIServerUserItem, bool bLookonUser)
 {
 	//m_vecRecord[wChairID].clear();
+	CTraceService::TraceString(TEXT("OnActionUserSitDown : %d"), TraceLevel_Normal, pIServerUserItem->GetUserID());
 	return true;
 }
 
 //用户起来
 bool CTableFrameSink::OnActionUserStandUp(IServerUserItem* pIServerUserItem, bool bLookonUser)
 {
+	CTraceService::TraceString(TEXT("OnActionUserStandUp : %d"), TraceLevel_Normal, pIServerUserItem->GetUserID());
 	//庄家设置
 	if (bLookonUser == false)
 	{
@@ -276,7 +292,7 @@ bool  CTableFrameSink::OnActionUserReady(IServerUserItem* pIServerUserItem, VOID
 {
 	//准备清空上局记录
 	//ZeroMemory(m_tagHistoryChart[wChairID], sizeof(m_tagHistoryChart[wChairID]));
-
+	CTraceService::TraceString(TEXT("OnActionUserReady : %d"), TraceLevel_Normal, pIServerUserItem->GetUserID());
 	return true;
 }
 
@@ -287,36 +303,14 @@ bool CTableFrameSink::OnUserTrustee(WORD wChairID, bool bTrustee)
 	{
 		return false;
 	}
-
-	//删除托管定时器
-	m_pITableFrame->KillGameTimer(IDI_OUT_CARD_0 + wChairID);
-
-	//
-	IServerUserItem* pIServerUserItem = m_pITableFrame->GetTableUserItem(wChairID);
-	if (bTrustee)
-	{
-		//设置托管标志
-		pIServerUserItem->SetTrusteeUser(true);
-
-		//前端发牌需要10秒,在发完牌前主动托管，等完牌再操作
-		CTime ctCurTime = CTime::GetCurrentTime();
-		//CTimeSpan TimeSpan = ctCurTime - m_ctStartTime;
-		//BYTE cbTempTime = TimeSpan.GetSeconds() < 10 ? (10 - TimeSpan.GetSeconds()) : 1;
-
-		//m_pITableFrame->SetGameTimer(IDI_OUT_CARD_0 + wChairID, cbTempTime * 1000, -1, NULL);
-	}
-	else
-	{
-		pIServerUserItem->SetTrusteeUser(false);
-	}
-
 	return true;
 }
 
 //开始人数
 WORD CTableFrameSink::GetStartPlayerCount()
 {
-	return 0;
+	CTraceService::TraceString(TEXT("GetStartPlayerCount :"), TraceLevel_Normal);
+	return GAME_PLAYER;
 
 }
 
@@ -332,12 +326,14 @@ bool CTableFrameSink::IsAllowPlayerReady(WORD wChairID)
 		return m_lUserFreeScore[wChairID] >= m_CustomConfig.lMinBetAmount;
 	}
 	return (GetUserScore(wChairID) >= m_lCellScore * MIN_MUTIPLIE);*/
+	CTraceService::TraceString(TEXT("IsAllowPlayerReady : %d"), TraceLevel_Normal, wChairID);
 	return true;
 }
 
 //底分变更
 VOID CTableFrameSink::OnEventBaseScoreVariation(LONG lBaseScore)
 {
+	CTraceService::TraceString(TEXT("OnEventBaseScoreVariation : %ld"), TraceLevel_Normal, lBaseScore);
 	//CString s;
 	//s.Format(_T("a2  lBaseScore:%I64d"), lBaseScore);
 	//CTraceService::TraceString(_T("s12345"), TraceLevel_Exception);
@@ -346,6 +342,7 @@ VOID CTableFrameSink::OnEventBaseScoreVariation(LONG lBaseScore)
 //分数变更
 VOID CTableFrameSink::OnEventScoreVariation(IServerUserItem* pIServerUserItem)
 {
+	CTraceService::TraceString(TEXT("OnEventScoreVariation : %d"), TraceLevel_Normal, pIServerUserItem->GetUserID());
 	//更新分数
 	/*if (pIServerUserItem->GetUserStatus() != US_LOOKON)
 	{
@@ -356,6 +353,7 @@ VOID CTableFrameSink::OnEventScoreVariation(IServerUserItem* pIServerUserItem)
 //桌子解散
 VOID CTableFrameSink::OnEventTableDismiss()
 {
+	CTraceService::TraceString(TEXT("OnEventTableDismiss :"), TraceLevel_Normal);
 	//清理数据
 	//ZeroMemory(m_lUserScore, sizeof(m_lUserScore));
 	//ZeroMemory(m_lUserFreeScore, sizeof(m_lUserFreeScore));
@@ -364,6 +362,8 @@ VOID CTableFrameSink::OnEventTableDismiss()
 //桌子修改
 VOID CTableFrameSink::OnEventTableModify(LPVOID pModifyParam, WORD wBufferSize)
 {
+	CTraceService::TraceString(TEXT("OnEventTableModify :"), TraceLevel_Normal);
+
 	tagBattleCreateParam* pParam = (tagBattleCreateParam*)pModifyParam;
 
 	CopyMemory(&m_BattleConfig, pParam, wBufferSize);
@@ -492,10 +492,13 @@ VOID CTableFrameSink::OnEventTableModify(LPVOID pModifyParam, WORD wBufferSize)
 //桌子创建
 VOID CTableFrameSink::OnEventTableCreated(LPVOID pCreateConfig, WORD wBufferSize)
 {
+	CTraceService::TraceString(TEXT("OnEventTableCreated :"), TraceLevel_Normal);
+
 	tagBattleCreateParam* pParam = (tagBattleCreateParam*)pCreateConfig;
 
 	CopyMemory(&m_BattleConfig, pParam, wBufferSize);
-
+	
+	_tlogic->send_base_score(pParam->BattleConfig.lBaseScore);
 	//// kk jia start
 	//m_lWinnerScore1 = pParam->BattleConfig.lMinWin;						//赢家分数
 	//m_lWinnerScore2 = pParam->BattleConfig.lWin2;						//赢家分数

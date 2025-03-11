@@ -1,7 +1,7 @@
 #pragma once
 
 #define KIND_ID						150									//游戏 I D 血战麻将302
-#define GAME_NAME					TEXT("血战麻将")					//游戏名字
+#define GAME_NAME					TEXT("红中断卡勾二人麻将")					//游戏名字
 
 //组件属性
 #define GAME_PLAYER					2									//游戏人数
@@ -18,7 +18,8 @@
 #define MK_CARD(c,v) (((c<<4)&0xF0) | (v&0x0F))
 
 #define COLOR(c) ((c>>4)&0xF0) 
-#define VALUE(c) (c&0xF0)
+#define VALUE(c) (c&0x0F)
+
 #define IS_WILD(c) (c==C_WILD)
 
 #define SHUNZI19	0x04
@@ -30,6 +31,7 @@
 
 typedef unsigned char carder;
 
+constexpr int __all_cards_num = 4 * 9 * COLOR_NUM + 4;
 
 #define HU_TYPE_NULL
 #define HU_TYPE_5DUI
@@ -139,7 +141,20 @@ const char str_hu_type_name[e_hu_type::H_TYPE_MAX][16] = {
 #pragma   pack(1) 
 
 typedef struct {
+	//我的信息
+	unsigned short		my_chair;
+	char				wilds;//红中数量
+	carder				cards[COLOR_NUM][10];//[c][v] c代表颜色(0:筒，1：条)，v代表牌值，[c][0]表示c颜色总牌数
+	char				opt;
+	
 
+	//桌面信息
+	int					hand_num[GAME_PLAYER];			//手上牌数
+	carder				door_info[GAME_PLAYER][3][4];	//碰杠信息,[0][0][i] i值解释 0:type(1 peng、2 gang) 1:chairid 2:card 3:(1 an,2 paogang 3penggang)
+	char				_baoting[GAME_PLAYER];
+	carder				_table_cards[GAME_PLAYER][__all_cards_num];
+	unsigned short		banker;
+						
 }s_sence_data_t;
 
 typedef struct {	//游戏开始

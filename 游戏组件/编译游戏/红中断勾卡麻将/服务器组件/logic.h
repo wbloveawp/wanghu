@@ -28,7 +28,7 @@ typedef struct {
 	void*		data;
 }mj_cards;
 
-constexpr int __all_cards_num = 4 * 9 * COLOR_NUM + 4;
+
 
 class CLogic
 {
