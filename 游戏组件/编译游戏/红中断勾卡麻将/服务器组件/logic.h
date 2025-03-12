@@ -7,14 +7,27 @@
 #define DOOR_TYPE_PENG	1
 #define DOOR_TYPE_GANG	2
 
+const char str_hu_type_name[e_hu_type::H_TYPE_MAX][16] = {
+	"无",
+	"五对",
+	"龙对1",
+	"龙对2",
+	"对对胡",
+	"将对对",
+	"断幺九",
+	"卡五",
+	"带幺九",
+	"同色",
+};
+
 typedef struct {
 
-	char		hand_num;
+	char		hand_num;	//含wild
 	char		wild;
 	carder		hand_cards[COLOR_NUM][10];
-
+	
 	char		door_num;
-	carder		door_color_num[COLOR_NUM];
+	carder		door_cards[COLOR_NUM][10];
 
 	carder		door_info[3][4];//最多三个,0:type(1 peng、2 gang) 1:chairid 2:card 3:(1 an,2 paogang 3penggang)       
 
@@ -53,7 +66,6 @@ public:
 	void fill_hand_cards(mj_cards &mj);
 
 	int cards();
-	bool is_init();
 public:
 	void add_card(mj_cards& mj, const carder& cd);
 	bool del_card(mj_cards& mj, const carder& cd);
@@ -68,17 +80,24 @@ protected:
 
 	int make_hu(const mj_cards& mj, const carder& cd);
 	bool make_combine(const mj_cards& mj, const carder& cd);
+	bool make_combine19(const mj_cards& mj);
 protected:
-	void update_hand_data(mj_cards& mj);
-	e_hu_type qidui_check(const mj_cards& mj);
-	e_hu_type duidui_check(const mj_cards& mj);
+	void		update_hand_data(mj_cards& mj);
 
-	e_hu_type tongse_check(const mj_cards& mj);
-	e_hu_type no19_check(const mj_cards& mj);
-	e_hu_type aal19_check(const mj_cards& mj);
-	e_hu_type ka5_check(const mj_cards& mj);
+	e_hu_type	qidui_check(const mj_cards& mj);
+	e_hu_type	duidui_check(const mj_cards& mj);
+
+	e_hu_type	tongse_check(const mj_cards& mj);
+	e_hu_type	no19_check(const mj_cards& mj);
+	e_hu_type	ka5_check(const mj_cards& mj);
+
+	bool		make_19(const mj_cards& mj);
+	e_hu_type	aal19_check(const mj_cards& mj);
+	
 protected:
-	static const int __check_array[2][9]; 
+	static const int __check_array[9]; 
+
+	
 
 	table_info_t tinfo;
 

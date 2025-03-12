@@ -116,8 +116,7 @@ bool  CTableFrameSink::InitTableFrameSink(IUnknownEx* pIUnknownEx)
 	//开始模式
 	m_pITableFrame->SetStartMode(StartMode_AllReady);
 
-	
-
+	CTraceService::TraceString(TEXT("InitTableFrameSink"), TraceLevel_Normal);
 	//自定规则
 	//ASSERT (m_pITableFrame->GetCustomRule() != NULL);
 	//m_pGameCustomRule = (tagCustomRule *)m_pITableFrame->GetCustomRule();

@@ -368,7 +368,7 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 			return false;
 		}
 		//地胡判断
-		if (_out_num == 1 && _peng_num == 0 && _gang_num == 0) {
+		if (_out_num == 1 && _peng_num == 0 && _gang_num == 0 && _baoting[chair]==1) {
 			fans = MAX_FANS;
 			hu_types[0] = H_DIHU;
 		}
@@ -384,7 +384,6 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 				}
 			}
 		}
-
 	}
 	else {
 		//自摸
@@ -450,7 +449,7 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 		fans = 1;
 	}
 
-	final_score += base_score * pow(2, fans - 1);
+	final_score += _base_score * pow(2, fans - 1);
 	//计算下雨分
 	
 	//下发
@@ -506,12 +505,11 @@ bool CTableLogic::operator_qinghu(WORD chair, carder cd)
 		operator_hu(chair,cd);
 	}
 	return true;
-	return true;
 }
 
 void CTableLogic::conclude_table(WORD winer)
 {
-
+	conclude_game();
 }
 
 void CTableLogic::conclude_game()

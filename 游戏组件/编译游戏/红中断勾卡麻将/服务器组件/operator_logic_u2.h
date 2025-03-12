@@ -42,7 +42,7 @@ const int hu_type_fans[e_hu_type::H_TYPE_MAX] = {
 	1 ,		//杠上花
 
 	2 ,		//报听
-	2 ,		//请胡
+	0 ,		//请胡
 	1 		//海底
 };
 

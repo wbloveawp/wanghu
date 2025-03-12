@@ -17,12 +17,12 @@
 #define COLOR_NUM 2
 #define MK_CARD(c,v) (((c<<4)&0xF0) | (v&0x0F))
 
-#define COLOR(c) ((c>>4)&0xF0) 
+#define COLOR(c) ((c>>4)&0x0F) 
 #define VALUE(c) (c&0x0F)
 
 #define IS_WILD(c) (c==C_WILD)
 
-#define SHUNZI19	0x04
+#define KA5SHUNZI	0x04
 #define KEZI		0x03
 #define DUIZI		0x02
 #define SHUNZI		0x01
@@ -66,9 +66,6 @@ enum e_hu_type {
 	H_ALL19,
 	H_TONGSE,
 
-	H_TIANHU ,
-	H_DIHU ,
-
 	H_GANG_QIANG,
 	H_GANG_PAO,
 	H_GANG_HUA,
@@ -77,21 +74,12 @@ enum e_hu_type {
 	H_QINGHU,
 	H_HAIDI,
 
+	H_TIANHU,
+	H_DIHU,
+
 	H_TYPE_MAX
 };
 
-
-const char str_hu_type_name[e_hu_type::H_TYPE_MAX][16] = {
-	"无",
-	"五对",
-	"龙对1",
-	"龙对2",
-	"对对胡",
-	"将对对",
-	"断幺九",
-	"卡五",
-	"带幺九",
-};
 
 /*
 *{

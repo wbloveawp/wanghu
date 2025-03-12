@@ -4,8 +4,14 @@
 #include <vector>
 #define NEW_F
 
-const int CLogic::__check_array[2][9] = { {5,2,3,4,6,7,8,1,9},
-									 { 1,9,2,3,4,5,6,7,8 } };
+#ifdef _DEBUG
+#define DLOG(...) printf(__VA_ARGS__);
+#else
+#define DLOG(...)
+#endif
+
+const int CLogic::__check_array[9] = { 5,2,3,4,6,7,8,1,9 };
+									
 
 const carder _base_cards[] = {
 	0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,
@@ -125,6 +131,78 @@ int CLogic::cards()
 	return __all_cards_num - tinfo.idx;
 }
 
+bool CLogic::make_combine19(const mj_cards& mj)
+{
+	auto _mj = mj;
+	auto& cds = _mj.hand_cards;
+	combine_t& cb = *((combine_t*)_mj.data);
+	combine_t cb_bak = cb;
+	for (char i = 0; i < COLOR_NUM; i++) //color
+	{
+		if (cds[i][0] % 3 == 1 || cds[i][0] <= 0) {//改进一，数量判断，数量为1 4 7 10 13 ，不可能直接返回
+			return false;
+		}
+		
+		for (char j = 1; j < 10; j++) { //value
+
+			if (cds[i][j] <= 0) {
+				continue;
+			}
+
+			if (j > 3 && j < 7) {
+				continue;
+			}
+
+			if (_mj.hand_num == 2) {
+				if (cds[i][0] == 2 && cds[i][j] == 2) {
+
+					if (1 != j && 9 != j) {	//最后2张必须是19
+						return false;
+					}
+					return true;
+				}
+				return false;
+			}
+
+			if (cds[i][j] >= 3 && (j==1 || j==9)) {//坎子必须是19
+				cds[i][j] -= 3;
+				cds[i][0] -= 3;
+				_mj.hand_num -= 3;
+				//assert(cb.cidx < 4);
+				if (make_combine19(_mj)) {
+					return true;
+				}
+				else {
+					_mj = mj;
+					cb = cb_bak;
+				}
+			}
+
+			if (j >= 8) {
+				continue;
+			}
+
+			if (cds[i][j] && cds[i][j + 1] && cds[i][j + 2]) {
+				cds[i][j]--;
+				cds[i][j + 1]--;
+				cds[i][j + 2]--;
+
+				cds[i][0] -= 3;
+				_mj.hand_num -= 3;
+				//assert(cb.cidx < 4);
+				if (make_combine19(_mj)) {
+					return true;
+				}
+				else {
+					_mj = mj;
+					cb = cb_bak;
+				}
+			}
+		}
+	}
+	return false;
+}
+
 bool CLogic::make_combine(const mj_cards& mj, const carder& cd)
 {
 	auto _mj = mj;
@@ -156,90 +234,26 @@ bool CLogic::make_combine(const mj_cards& mj, const carder& cd)
 				}
 				return false;
 			}
-			//all19
-			do {
-				if (!IS_WILD(cd) &&
-					VALUE(cd) > 3 && 
-					VALUE(cd) < 7)
-					break;
-				//hand
-				if (cds[i][4] + cds[i][5] + cds[i][6] > 0)
-					break;
-				//door
-				if (_mj.door_info[0][0] > 0) {
-					if (VALUE(_mj.door_info[0][2]) != 0x1 && VALUE(_mj.door_info[0][2]) != 0x9){
-						break;
-					}
-					if (_mj.door_info[1][0] > 0) {
-						if (VALUE(_mj.door_info[1][2]) != 0x1 && VALUE(_mj.door_info[1][2]) != 0x9) {
-							break;
-						}
-						if (_mj.door_info[2][0] > 0) {
-							if (VALUE(_mj.door_info[2][2]) != 0x1 && VALUE(_mj.door_info[2][2]) != 0x9) {
-								break;
-							}
-						}
-					}
-				}
-				//start check
-				if (cds[i][1] > 0 && cds[i][2] > 0 && cds[i][3] > 0) {
-					--cds[i][1];
-					--cds[i][2];
-					--cds[i][3];
-					cds[i][0] -= 3;
-					_mj.hand_num -= 3;
-					cb.combine[cb.cidx][0] = SHUNZI19;
-					cb.combine[cb.cidx][1] = MK_CARD(i, 1);
-					cb.combine[cb.cidx][2] = MK_CARD(i, 2);
-					cb.combine[cb.cidx++][3] = MK_CARD(i, 3);
-					if (make_combine(_mj, cd)) {
-						return true;
-					}
-					else {
-						_mj = mj;
-						cb = cb_bak;
-					}
-				}
-				if (cds[i][7] > 0 && cds[i][8] > 0 && cds[i][9] > 0) {
-					--cds[i][7];
-					--cds[i][8];
-					--cds[i][9];
-					cds[i][0] -= 3;
-					_mj.hand_num -= 3;
-					cb.combine[cb.cidx][0] = SHUNZI19;
-					cb.combine[cb.cidx][1] = MK_CARD(i, 7);
-					cb.combine[cb.cidx][2] = MK_CARD(i, 8);
-					cb.combine[cb.cidx++][3] = MK_CARD(i, 9);
-					if (make_combine(_mj, cd)) {
-						return true;
-					}
-					else {
-						_mj = mj;
-						cb = cb_bak;
-					}
-				}
-			} while (0);
 			//ka5
-			if (IS_WILD(cd) || VALUE(cd) == 0x05) {
-				if (cds[i][4] > 0 && cds[i][5] > 0 && cds[i][6] > 0) {
-					--cds[i][4];
-					--cds[i][5];
-					--cds[i][6];
-					cds[i][0] -= 3;
-					_mj.hand_num -= 3;
-					cb.combine[cb.cidx][0] = SHUNZI;
-					cb.combine[cb.cidx][1] = MK_CARD(i, 4);
-					cb.combine[cb.cidx][2] = MK_CARD(i, 5);
-					cb.combine[cb.cidx++][3] = MK_CARD(i,6);
-					if (make_combine(_mj, cd)) {
-						return true;
-					}
-					else {
-						_mj = mj;
-						cb = cb_bak;
-					}
+			if (cds[i][4] > 0 && cds[i][5] > 0 && cds[i][6] > 0) {
+				--cds[i][4];
+				--cds[i][5];
+				--cds[i][6];
+				cds[i][0] -= 3;
+				_mj.hand_num -= 3;
+				cb.combine[cb.cidx][0] = KA5SHUNZI;
+				cb.combine[cb.cidx][1] = MK_CARD(i, 4);
+				cb.combine[cb.cidx][2] = MK_CARD(i, 5);
+				cb.combine[cb.cidx++][3] = MK_CARD(i,6);
+				if (make_combine(_mj, cd)) {
+					return true;
+				}
+				else {
+					_mj = mj;
+					cb = cb_bak;
 				}
 			}
+			
 
 			if (cds[i][j] >= 3) {
 				cds[i][j] -= 3;
@@ -289,38 +303,33 @@ bool CLogic::make_combine(const mj_cards& mj, const carder& cd)
 int CLogic::make_hu(const mj_cards& mj, const carder& cd)
 {
 	auto _mj = mj;
-	int n19 = _mj.hand_cards[0][1] + _mj.hand_cards[0][9] + _mj.hand_cards[1][1] + _mj.hand_cards[1][1]>0 ?1:0;
-	if (n19<=0 && _mj.door_num>0) {
-		for (int i = 0; i < 3 && _mj.door_info[i][0]>0; i++) {
-			if (VALUE(_mj.door_info[i][2])==1 || VALUE(_mj.door_info[i][2])==9) {
-				n19 = 1;
-				break;
-			}
-		}
-	}
-
+	char card_choos_flag[10] = { 0 };
+	char card_wild_sort[10] = { 0 };
+	int choose_n = 0;
 	if (_mj.wild > 0) {
 		--_mj.wild;
 		for (auto c = 0; c < COLOR_NUM; c++) {
-			if (_mj.hand_cards[c][0] <= 0 && _mj.door_color_num[c]<=0) {
+			if (_mj.hand_cards[c][0] <= 0 && _mj.door_cards[c][0]<=0) {
+				//此色不匹配
 				continue;
 			}
+			//重新设计排序牌
 			for (auto v = 0; v < 9; v++) {
-				if (_mj.hand_cards[c][__check_array[n19][v]] > 3)
+				if (_mj.hand_cards[c][__check_array[v]] > 3)
 					continue;
 				++_mj.hand_cards[c][0];
-				++_mj.hand_cards[c][__check_array[n19][v]];
+				++_mj.hand_cards[c][__check_array[v]];
 				if (make_hu(_mj, cd)) {
 					return true;
 				}
 				//数据先恢复
 				memcpy(_mj.hand_cards, mj.hand_cards, sizeof(mj.hand_cards));
 			}
+			
 		}
 	}
 	if (!make_combine(_mj,cd)) {
-		combine_t* cb = (combine_t*)_mj.data;
-		memset(cb, 0, sizeof(combine_t));
+		memset(_mj.data, 0, sizeof(combine_t));
 		return false;
 	}
 	return true;
@@ -369,70 +378,82 @@ bool CLogic::is_hu(mj_cards &_mj, const carder& cd)
 	char qidui_flag = 0;
 	mj.data = &cb;
 	
-	if (!IS_WILD(cd)) {
-		if (mj.hand_cards[COLOR(cd)][VALUE(cd)] > 3) {
-			return false;
-		}
-	}
 	add_card(mj, cd);
 	
 	//special check
+	DLOG("\n%x  ",cd);
 	auto hu_type = e_hu_type::H_NULL;
 	do {
+		
+		hu_type = aal19_check(mj);
+		if (hu_type != e_hu_type::H_NULL) {
+			DLOG("%s  ", str_hu_type_name[hu_type]);
+		}
 		hu_type = qidui_check(mj);
 		if (hu_type != e_hu_type::H_NULL) {
+			printf("%s  ", str_hu_type_name[hu_type]);
 			break;
 		}
 		hu_type = duidui_check(mj);
 		if (hu_type != e_hu_type::H_NULL) {
+			printf("%s  ", str_hu_type_name[hu_type]);
 			break;
 		}
 	} while (0);
 
-	if (hu_type != e_hu_type::H_NULL) {
+	do {
+		if (hu_type == e_hu_type::H_NULL) {
+			break;
+		}
+
 		mj.final_type[final_idx++] = hu_type;
-		if (tongse_check(mj)) {
+
+		if (hu_type == e_hu_type::H_JDUIDUI) {
+			break;
+		}
+
+		if (tongse_check(mj) == e_hu_type::H_TONGSE) {
+			printf(" %s  ", str_hu_type_name[e_hu_type::H_TONGSE]);
 			mj.final_type[final_idx++] = e_hu_type::H_TONGSE;
 		}
 
-		goto PRINT;
-	}
+		if (no19_check(mj) == e_hu_type::H_NO19) {
+			mj.final_type[final_idx++] = e_hu_type::H_NO19;
+			printf(" %s  ", str_hu_type_name[e_hu_type::H_NO19]);
+		}
+		else {
+			if (aal19_check(mj) == e_hu_type::H_ALL19) {
+				mj.final_type[final_idx++] = e_hu_type::H_ALL19;
+			}
+		}
+
+	} while (0); 
 	
+	if (hu_type != e_hu_type::H_NULL) {
+		return true;
+	}
 	if (!make_hu(mj,cd)) {
 		return false;
 	}
-	//1.
+
+	//1.清一色
 	if (tongse_check(mj)) {
 		mj.final_type[final_idx++] = e_hu_type::H_TONGSE;
 	}
-	//2.
+	//2.卡5
 	if (IS_WILD(cd) || VALUE(cd) == 0x05) {
 		if (ka5_check(mj)) {
 			mj.final_type[final_idx++] = e_hu_type::H_KA5;
 		}
 	}
-	//3.
+	//3.带幺和幺九
 	if (aal19_check(mj)) {
 		mj.final_type[final_idx++] = e_hu_type::H_ALL19 ;
 	}
 	else if(no19_check(mj)){
 		mj.final_type[final_idx++] = e_hu_type::H_NO19;
 	}
-	//4.last
-	if (cards() <= 0) {
-		//mj.final_type[final_idx++] = e_hu_type::H_NO19;
-	}
-PRINT:
-	printf("%x is ok ", cd);
-	for (int i = 0; i < final_idx; i++) {
-		printf("  hu type is [%d  %s] ", mj.final_type[i] , str_hu_type_name[mj.final_type[i]]);
-	}
-	printf(" ...\n");
-	for (int i = 0; i < cb.cidx; i++) {
-		printf("  combine [%x  %x  %x %x] ", cb.combine[i][0], cb.combine[i][1], 
-			cb.combine[i][2], cb.combine[i][3]);
-	}
-	printf(" ...\n");
+
 	return true;
 }
 
@@ -461,10 +482,14 @@ e_hu_type CLogic::qidui_check(const mj_cards& mj)
 {
 	int t_num[] = { mj.quadra_num , mj.triple_num ,mj.double_num, mj.wild };
 
+	if (mj.door_num > 0) {
+		return e_hu_type::H_NULL;
+	}
+
 	if (mj.double_num + mj.triple_num + mj.quadra_num * 2 + mj.wild >= 5) {
 		assert(mj.door_num == 0);
-		assert(mj.door_color_num[C_TONG] == 0);
-		assert(mj.door_color_num[C_TIAO] == 0);
+		assert(mj.door_cards[C_TONG][0] == 0);
+		assert(mj.door_cards[C_TIAO][0] == 0);
 
 		while (t_num[3]>0) {
 			
@@ -496,9 +521,9 @@ e_hu_type CLogic::qidui_check(const mj_cards& mj)
 
 e_hu_type CLogic::tongse_check(const mj_cards& mj)
 {
-	if (mj.door_color_num[C_TONG] == 0 && mj.hand_cards[C_TONG][0] == 0)
+	if (mj.door_cards[C_TONG] == 0 && mj.hand_cards[C_TONG][0] == 0)
 		return e_hu_type::H_TONGSE;
-	if (mj.door_color_num[C_TIAO] == 0 && mj.hand_cards[C_TIAO][0] == 0)
+	if (mj.door_cards[C_TIAO] == 0 && mj.hand_cards[C_TIAO][0] == 0)
 		return e_hu_type::H_TONGSE;
 	return e_hu_type::H_NULL;
 }
@@ -582,7 +607,7 @@ e_hu_type CLogic::no19_check(const mj_cards& _mj)
 
 		switch (cb->combine[i][0])
 		{
-		case SHUNZI19:return e_hu_type::H_NULL;
+		case KA5SHUNZI:return e_hu_type::H_NULL;
 		case KEZI:
 		case DUIZI:
 			if (VALUE(cb->combine[i][1]) == 0x01)
@@ -603,25 +628,25 @@ e_hu_type CLogic::no19_check(const mj_cards& _mj)
 e_hu_type CLogic::aal19_check(const mj_cards& _mj)
 {
 	//hand
-	if (_mj.hand_cards[0][4] + _mj.hand_cards[0][5] + _mj.hand_cards[0][6] > 0
-		|| _mj.hand_cards[0][4] + _mj.hand_cards[0][5] + _mj.hand_cards[0][6] > 0)
-		e_hu_type::H_NULL;
+	if (_mj.hand_cards[C_TONG][4] + _mj.hand_cards[C_TONG][5] + _mj.hand_cards[C_TONG][6] > 0) {
+		return e_hu_type::H_NULL;
+	}
+	if (_mj.hand_cards[C_TIAO][4] + _mj.hand_cards[C_TIAO][5] + _mj.hand_cards[C_TIAO][6] > 0) {
+		return e_hu_type::H_NULL;
+	}
 	//door
-	if (_mj.door_info[0][0] > 0) {
-		if (VALUE(_mj.door_info[0][2]) != 0x1 && VALUE(_mj.door_info[0][2]) != 0x9) {
+	if (_mj.door_num > 0) {
+		if (_mj.hand_cards[C_TIAO][4] + _mj.hand_cards[C_TIAO][5] + _mj.hand_cards[C_TIAO][6] > 0) {
 			return e_hu_type::H_NULL;
 		}
-		if (_mj.door_info[1][0] > 0) {
-			if (VALUE(_mj.door_info[1][2]) != 0x1 && VALUE(_mj.door_info[1][2]) != 0x9) {
-				return e_hu_type::H_NULL;
-			}
-			if (_mj.door_info[2][0] > 0) {
-				if (VALUE(_mj.door_info[2][2]) != 0x1 && VALUE(_mj.door_info[2][2]) != 0x9) {
-					return e_hu_type::H_NULL;
-				}
-			}
+
+		if (_mj.hand_cards[C_TIAO][4] + _mj.hand_cards[C_TIAO][5] + _mj.hand_cards[C_TIAO][6] > 0) {
+			return e_hu_type::H_NULL;
 		}
 	}
+
+	return make_19(_mj)? e_hu_type::H_ALL19: e_hu_type::H_NULL ;
+	/*
 	combine_t* cb = (combine_t * )_mj.data;
 	for (int i = 0; i < cb->cidx; i++) {
 		switch (cb->combine[i][0]) 
@@ -636,8 +661,35 @@ e_hu_type CLogic::aal19_check(const mj_cards& _mj)
 		default:return e_hu_type::H_NULL;
 		}
 	}
-
 	return e_hu_type::H_ALL19;
+	*/
+}
+bool CLogic::make_19(const mj_cards& mj)
+{
+	auto _mj = mj;
+	if (_mj.wild > 0) {
+		--_mj.wild;
+		for (auto c = 0; c < COLOR_NUM; c++) {
+
+			if (_mj.hand_cards[c][0] <= 0 && _mj.door_cards[c][0] <= 0) {
+				//此色不匹配
+				continue;
+			}
+			char wc[] = { 1,9,2,3,7,8 };//带幺 7，8，2，3 不可能出现4张的
+			for (auto i = 0x00; i < sizeof(wc) / sizeof(char); i++) {
+
+				++_mj.hand_cards[c][0];
+				++_mj.hand_cards[c][wc[i]];
+				if (make_19(_mj)) {
+					return true;
+				}
+				//匹配不成功，牌数据恢复
+				memcpy(_mj.hand_cards, mj.hand_cards, sizeof(mj.hand_cards));
+			}
+		}
+	}
+
+	return make_combine19(mj);
 }
 
 e_hu_type CLogic::ka5_check(const mj_cards& mj)
@@ -659,7 +711,7 @@ bool CLogic::peng(mj_cards& mj, char chair, const carder& cd)
 	mj.hand_cards[COLOR(cd)][VALUE(cd)] -= 2;
 	mj.hand_num -= 2;
 	mj.door_num += 3;
-	mj.door_color_num[COLOR(cd)] += 3;
+	mj.door_cards[COLOR(cd)][0] += 3;
 	for (int i = 0; i < 3; i++) {
 		if (mj.door_info[i][0]<=0) {
 			mj.door_info[i][0] = DOOR_TYPE_PENG;
@@ -679,7 +731,7 @@ char CLogic::gang(mj_cards& mj, char chair, const carder& cd)
 		mj.hand_cards[COLOR(cd)][VALUE(cd)] -= 3;
 		mj.hand_num -= 3;
 		mj.door_num += 4;
-		mj.door_color_num[COLOR(cd)] += 4;
+		mj.door_cards[COLOR(cd)][0] += 4;
 
 		for (int i = 0; i < 3; i++) {
 			if (mj.door_info[i][0] <= 0) {
@@ -697,7 +749,7 @@ char CLogic::gang(mj_cards& mj, char chair, const carder& cd)
 		mj.hand_cards[COLOR(cd)][VALUE(cd)] -= 4;
 		mj.hand_num -= 4;
 		mj.door_num += 4;
-		mj.door_color_num[COLOR(cd)] += 4;
+		mj.door_cards[COLOR(cd)][0] += 4;
 
 		for (int i = 0; i < 3; i++) {
 			if (mj.door_info[i][0] <= 0) {
