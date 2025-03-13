@@ -76,13 +76,13 @@ class CTableLogic
 	ITableFrameItem*	_table;
 
 	std::function<void(WORD, carder, bool)> _pass_fun;// _pass_fun[GAME_PLAYER];
-	//std::function<bool(WORD, carder, bool)> _hu_fun;
+	//std::function<bool(WORD, carder, bool)> _baoting;
 	std::function<void(void)> _timeout_fun;
 	//¿ØÖÆ
 	carder				_control_card;
 	WORD				_control_chair;
 
-	SCORE				_base_score;
+	int				_base_score;
 protected:
 	void		clean_opt();
 
@@ -95,10 +95,10 @@ public:
 
 	void user_take_card(WORD chair, bool is_gang = false , carder cd = C_INVALID);
 
-	char make_user_opt(mj_cards& mj,carder cd, char is_taker=0);
+	char make_user_opt(mj_cards& mj,carder cd, bool is_taker);
 	//char make_user_baoting(mj_cards& mj, carder cd);
 
-	void change_next_banker(WORD chair = INVALID_CHAIR) {};
+	void change_next_banker(WORD chair = INVALID_CHAIR);
 
 	void operator_pass(WORD chair , carder cd, bool is_tmoutt = false);
 	bool operator_out(WORD chair, carder cd,bool baoting = false , bool is_tmoutt = false);
@@ -107,9 +107,10 @@ public:
 	bool operator_hu(WORD chair, carder cd,bool is_qinghu=false);
 	bool operator_qinghu(WORD chair, carder cd);
 	bool operator_zhuaqinghu(WORD chair, carder cd) { return  true; };
+	bool operator_baoting(WORD chair, carder cd);
 	//bool conclude_check() { return true; };
 	//void conclude_user(WORD bk) {};
-	void conclude_table(WORD winer);
+	void conclude_table(WORD winer, int types, e_hu_type hu_type[],int fans,int s);
 	void conclude_game();
 
 	void send_scence(IServerUserItem* su);

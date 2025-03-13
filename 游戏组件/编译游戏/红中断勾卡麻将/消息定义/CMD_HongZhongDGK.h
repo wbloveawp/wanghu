@@ -77,19 +77,10 @@ enum e_hu_type {
 	H_TIANHU,
 	H_DIHU,
 
+	H_GEN,
+
 	H_TYPE_MAX
 };
-
-
-/*
-*{
-	"清一色",
-	"勾",
-	"天胡",
-	"地胡",
-	"海底"
-}
-*/
 
 #define OPT_TIME_OUT	30000
 
@@ -123,7 +114,8 @@ enum e_hu_type {
 #define SUB_S_ZHUAQINGHU			108									//抓请胡
 #define SUB_S_BAOTING				109									//报听
 
-#define SUB_S_CONTROL_CARD			999									//控制摸牌
+#define SUB_S_CONCLUD_NOW			110									//结算本局
+#define SUB_S_CONCLUD_OVER			111									//结算本场
 
 
 #pragma   pack(1) 
@@ -142,7 +134,8 @@ typedef struct {
 	char				_baoting[GAME_PLAYER];
 	carder				_table_cards[GAME_PLAYER][__all_cards_num];
 	unsigned short		banker;
-						
+		
+	int					left_cards;//剩余未摸的牌数
 }s_sence_data_t;
 
 typedef struct {	//游戏开始
@@ -221,6 +214,29 @@ typedef struct {
 
 }s_qinghu_t;
 
+
+typedef struct {
+
+	unsigned short		chair;
+
+}s_baoting_t;
+
+typedef struct {
+
+	unsigned short		winer;	//winder
+
+	int					final_type_num;	//牌型数量
+	int					final_type[e_hu_type::H_TYPE_MAX];//类型数组
+	int					gens;			//根数
+	int					ka5;			//卡数
+	int					gang_score;		//杠获得的分
+	int					final_score;	//最终得分
+
+	carder				hand_cards[GAME_PLAYER][COLOR_NUM][10];//所有人手牌信息
+						//hand_cards[chair][c][0] 表示颜色为c的总牌数，[chair][c][v] 表示颜色为c，值为v的牌的总数
+	int					hongzhongs[GAME_PLAYER];//手中红中数量
+}s_conclude_now_t;
+
 //客户端命令
 #define SUB_C_PASS				1001								//过
 #define SUB_C_OUT				1002								//出
@@ -231,6 +247,8 @@ typedef struct {
 #define SUB_C_BAOTING			1006								//报听
 #define SUB_C_ZHUAQINGHU		1007								//抓请胡
 
+
+#define SUB_C_CONTROL_CARD		999									//控制摸牌
 //出牌
 typedef struct {
 	carder		cd;
@@ -239,7 +257,7 @@ typedef struct {
 
 //其他操作均使用此数据结构
 typedef struct {
-	carder		cd;
+	carder		cd;	//如果是炮胡，则把炮胡的牌上传，如果是自摸也自摸的那张牌上传
 }c_opt_card_t;
 
 #pragma   pack() 

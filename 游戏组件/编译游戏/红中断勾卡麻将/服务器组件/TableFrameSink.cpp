@@ -310,7 +310,6 @@ WORD CTableFrameSink::GetStartPlayerCount()
 {
 	CTraceService::TraceString(TEXT("GetStartPlayerCount :"), TraceLevel_Normal);
 	return GAME_PLAYER;
-
 }
 
 //ÔÊÐí×¼±¸

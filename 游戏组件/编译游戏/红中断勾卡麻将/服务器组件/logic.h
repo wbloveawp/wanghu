@@ -20,6 +20,11 @@ const char str_hu_type_name[e_hu_type::H_TYPE_MAX][16] = {
 	"同色",
 };
 
+struct combine_t {
+	char		cidx;
+	char		combine[4][4];
+};
+
 typedef struct {
 
 	char		hand_num;	//含wild
@@ -36,7 +41,7 @@ typedef struct {
 	char		quadra_num;
 
 	int			final_type_num;
-	e_hu_type	final_type[e_hu_type::H_TYPE_MAX];
+	int			final_type[e_hu_type::H_TYPE_MAX];
 
 	void*		data;
 }mj_cards;
@@ -45,11 +50,6 @@ typedef struct {
 
 class CLogic
 {
-	struct combine_t {
-		char		cidx;
-		char		combine[4][4];
-	};
-	
 	struct table_info_t {
 		int idx;
 		carder all_cards[__all_cards_num];
@@ -70,11 +70,13 @@ public:
 	void add_card(mj_cards& mj, const carder& cd);
 	bool del_card(mj_cards& mj, const carder& cd);
 public:
-	bool is_hu(mj_cards& mj, const carder& cd);
+	bool is_hu(mj_cards& mj, const carder& cd,bool is_taker);
+
+	e_hu_type is_5dui(const mj_cards& mj,const carder & cd);
 
 	bool peng(mj_cards& mj,char chair, const carder& cd);
 
-	char gang(mj_cards& mj, char chair, const carder& cd);
+	char gang(mj_cards& mj, char chair, const carder& cd,bool is_taker);
 
 protected:
 
@@ -89,15 +91,14 @@ protected:
 
 	e_hu_type	tongse_check(const mj_cards& mj);
 	e_hu_type	no19_check(const mj_cards& mj);
-	e_hu_type	ka5_check(const mj_cards& mj);
+	e_hu_type	ka5_check(const mj_cards& mj,const carder& cd=C_INVALID);
+
+
 
 	bool		make_19(const mj_cards& mj);
 	e_hu_type	aal19_check(const mj_cards& mj);
 	
 protected:
-	static const int __check_array[9]; 
-
-	
 
 	table_info_t tinfo;
 
@@ -106,3 +107,11 @@ protected:
 	int		wilds;
 };
 
+
+/*
+	2025-03-13
+	遗留点：
+	1.抓请胡的结算
+	2.卡5 的卡数
+	3.带幺九判定算法还可以继续改进，提高效率
+*/
