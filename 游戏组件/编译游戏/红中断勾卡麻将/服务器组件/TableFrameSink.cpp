@@ -91,6 +91,7 @@ void* CTableFrameSink::QueryInterface(const IID& Guid, DWORD dwQueryVer)
 {
 	QUERYINTERFACE(ITableFrameSink, Guid, dwQueryVer);
 	QUERYINTERFACE(ITableUserAction, Guid, dwQueryVer);
+	QUERYINTERFACE(IEventBattleItem, Guid, dwQueryVer);
 	QUERYINTERFACE_IUNKNOWNEX(ITableFrameSink, Guid, dwQueryVer);
 	return NULL;
 }
@@ -158,6 +159,7 @@ SCOREEX CTableFrameSink::QueryLessEnterScore(WORD wChairID, IServerUserItem* pIS
 bool CTableFrameSink::OnEventGameStart()
 {
 	CTraceService::TraceString(TEXT("OnEventGameStart"), TraceLevel_Normal);
+	//m_pITableFrame->SetGameStatus()
 	_tlogic->new_cycle();
 	return true;
 }
@@ -173,7 +175,14 @@ bool CTableFrameSink::OnEventGameConclude(WORD wChairID, IServerUserItem* pIServ
 bool CTableFrameSink::OnEventSendGameScene(WORD wChiarID, IServerUserItem* pIServerUserItem, BYTE cbGameStatus, bool bSendSecret)
 {
 	CTraceService::TraceString(TEXT("OnEventSendGameScene"), TraceLevel_Normal);
-	_tlogic->send_scence(pIServerUserItem);
+
+	switch (cbGameStatus)
+	{
+	case GAME_STATUS_FREE:_tlogic->send_free_scence(pIServerUserItem); break;
+	case GAME_STATUS_PLAY:_tlogic->send_playing_scence(pIServerUserItem); break;
+	case GAME_STATUS_WAIT:break;
+	}
+	
 	//m_pITableFrame->OnEventSendGameScene()
 	return true;
 }
@@ -490,137 +499,45 @@ VOID CTableFrameSink::OnEventTableModify(LPVOID pModifyParam, WORD wBufferSize)
 //桌子创建
 VOID CTableFrameSink::OnEventTableCreated(LPVOID pCreateConfig, WORD wBufferSize)
 {
-	CTraceService::TraceString(TEXT("OnEventTableCreated :"), TraceLevel_Normal);
-
 	tagBattleCreateParam* pParam = (tagBattleCreateParam*)pCreateConfig;
 
 	CopyMemory(&m_BattleConfig, pParam, wBufferSize);
 	
-	_tlogic->send_base_score(pParam->BattleConfig.lBaseScore);
-	//// kk jia start
-	//m_lWinnerScore1 = pParam->BattleConfig.lMinWin;						//赢家分数
-	//m_lWinnerScore2 = pParam->BattleConfig.lWin2;						//赢家分数
-	//m_lWinnerRevenue1 = pParam->BattleConfig.lRevenueRate1;					//赢家税收	
+	if (m_BattleConfig.BattleConfig.lBaseScore > 1000) {
+		m_BattleConfig.BattleConfig.lBaseScore = 1000;
+		CTraceService::TraceString(TEXT("OnEventTableCreated 客户端设置 底分: %lld  修正为 %lld "), TraceLevel_Warning, 
+			pParam->BattleConfig.lBaseScore,
+			m_BattleConfig.BattleConfig.lBaseScore);
+	}
 
-	//m_lWinnerScore3 = pParam->BattleConfig.lWin3;						//赢家分	
+	if (m_BattleConfig.BattleConfig.lBaseScore < 1) {
+		m_BattleConfig.BattleConfig.lBaseScore = 1;
+		CTraceService::TraceString(TEXT("OnEventTableCreated 客户端设置 底分: %lld  修正为 %lld "), TraceLevel_Warning,
+			pParam->BattleConfig.lBaseScore,
+			m_BattleConfig.BattleConfig.lBaseScore);
+	}
+	
+	if (m_BattleConfig.BattleConfig.lRevenueRate1 > m_BattleConfig.BattleConfig.lMinWin) {
+		m_BattleConfig.BattleConfig.lRevenueRate1 = m_BattleConfig.BattleConfig.lMinWin;
+		CTraceService::TraceString(TEXT("OnEventTableCreated 客户端设置 lRevenueRate1=%lld  lMinWin=%lld 修正为 lRevenueRate1=%lld "), 
+			TraceLevel_Warning,
+			pParam->BattleConfig.lRevenueRate1,
+			m_BattleConfig.BattleConfig.lMinWin,
+			m_BattleConfig.BattleConfig.lRevenueRate1);
+	}
 
-	//m_lWinnerRevenue2 = pParam->BattleConfig.lRevenueRate2;					//赢家税收
-	//m_lWinnerRevenue3 = pParam->BattleConfig.lRevenueRate3;					//赢家税收
+	CTraceService::TraceString(TEXT("OnEventTableCreated(%d %d) : lBaseScore=%lld  lMinWin=%lld  lRevenueRate1=%lld "), TraceLevel_Normal,
+		(int)sizeof(tagBattleCreateParam),(int)wBufferSize,
+		m_BattleConfig.BattleConfig.lBaseScore,
+		m_BattleConfig.BattleConfig.lMinWin,
+		m_BattleConfig.BattleConfig.lRevenueRate1
+		);
 
-	//CString s;
-	//s.Format(_T("create桌子 m_lWinnerScore1:%I64d, m_lWinnerScore2:%I64d, m_lWinnerScore3:%I64d, m_lWinnerRevenue1:%I64d, m_lWinnerRevenue2:%I64d, m_lWinnerRevenue3:%I64d"), m_lWinnerScore1, m_lWinnerScore2, m_lWinnerScore3, m_lWinnerRevenue1, m_lWinnerRevenue2, m_lWinnerRevenue3);
-	//CTraceService::TraceString(s, TraceLevel_Exception);
+	_tlogic->set_base_score(pParam->BattleConfig.lBaseScore);
+	
+	//_tlogic-
 
-	//kk jia end
-
-
-	//BYTE cbIndex = 0;
-
-	////先后手
-	//bool bAllowBankerFirst = pParam->BattleConfig.cbGameOption[cbIndex++] == 0 ? true : false;
-
-	////特牌
-	//bool bAllowSpecialCard = pParam->BattleConfig.cbGameOption[cbIndex++] == 0 ? false : true;
-
-	////地九王算大牌
-	//bool bAllowDJWBigCard = pParam->BattleConfig.cbGameOption[cbIndex++] == 0 ? true : false;
-
-	////滚滚翻
-	//bool bAllowBetGGF = pParam->BattleConfig.cbGameOption[cbIndex++] == 0 ? true : false;
-
-
-	//SCORE lMaxBoboMutiple[3] = { 300,500,1000 };
-
-	//BYTE cbSelectIndex = pParam->BattleConfig.cbGameOption[cbIndex++];
-	//if (cbSelectIndex < 3)
-	//{
-	//	//携带筹码
-	//	m_CustomConfig.lMaxBoboMultiple = lMaxBoboMutiple[cbSelectIndex];
-
-	//	//CString s;
-	//	//s.Format(_T("携带筹码:%ld"), m_CustomConfig.lMaxBoboMultiple);
-	//	//CTraceService::TraceString(s, TraceLevel_Exception);
-
-	//	//初始分数
-	//	for (WORD i = 0; i < GAME_PLAYER; i++)
-	//	{
-	//		m_lUserScore[i] = 0;
-
-	//		//m_lUserFreeScore[i] = m_CustomConfig.lMaxBoboMultiple * m_lCellScore;//kk guan
-	//		//查询用户
-	//		IServerUserItem* pIServerUserItem = m_pITableFrame->GetTableUserItem(i);//kk jia
-	//		if (pIServerUserItem != NULL)//kk jia
-	//			m_lUserFreeScore[i] = pIServerUserItem->GetUserScore();//kk jia
-	//	}
-	//}
-
-	//SCORE lMinBetValue = 0;
-
-	//CopyMemory(&lMinBetValue, &pParam->BattleConfig.cbGameOption[cbIndex], sizeof(BYTE) * 4);
-	//m_lMinBetValue = lMinBetValue;
-
-	///*CString s;
-	//	s.Format(_T("lMinBetValue:%ld"), lMinBetValue);
-	//	CTraceService::TraceString(s, TraceLevel_Exception);*/
-
-	//	//携带筹码
-	//m_CustomConfig.lMinBetAmount = static_cast<SCORE>(lMinBetValue) * m_lCellScore;
-
-
-	////先后手
-	//if (bAllowBankerFirst == true)
-	//{
-	//	m_CustomConfig.cbRuleOption |= GR_ALLOW_FIRSTER;
-	//}
-	//else
-	//{
-	//	m_CustomConfig.cbRuleOption &= ~GR_ALLOW_FIRSTER;
-	//}
-
-	////特牌
-	//if (bAllowSpecialCard == true)
-	//{
-	//	m_CustomConfig.cbRuleOption |= GR_SHS_AND_SHL;
-	//}
-	//else
-	//{
-	//	m_CustomConfig.cbRuleOption &= ~GR_SHS_AND_SHL;
-	//}
-
-	////地九王算大牌
-	//if (bAllowDJWBigCard == true)
-	//{
-	//	m_CustomConfig.cbRuleOption |= GR_DJW_BIG_CARD;
-	//}
-	//else
-	//{
-	//	m_CustomConfig.cbRuleOption &= ~GR_DJW_BIG_CARD;
-	//}
-
-	////下注滚滚翻
-	//if (bAllowBetGGF == true)
-	//{
-	//	m_CustomConfig.cbRuleOption |= GR_ALLOW_BET_GGF;
-	//}
-	//else
-	//{
-	//	m_CustomConfig.cbRuleOption &= ~GR_ALLOW_BET_GGF;
-	//}
-
-	////设置规则
-	//m_GameLogic.SetRuleOption(m_CustomConfig.cbRuleOption);
-
-	//m_wBattleCount = 0;
-
-	////坐下倍数
-	//m_pITableFrame->SetSitdownGameMultiple(MIN_MUTIPLIE);
-	////kk jia
-	//m_pITableFrame->SetMinEnterScore(m_CustomConfig.lMaxBoboMultiple);
-
-	////起立倍数
-	//m_pITableFrame->SetStandupGameMultiple(MIN_MUTIPLIE);
-
-	m_pITableFrame->SetMaxPlayerCount(m_BattleConfig.BattleConfig.wPlayerCount);
+	//m_pITableFrame->SetMaxPlayerCount(m_BattleConfig.BattleConfig.wPlayerCount);
 	return;
 }
 

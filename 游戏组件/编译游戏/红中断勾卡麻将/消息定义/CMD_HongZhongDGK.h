@@ -22,6 +22,7 @@
 
 #define IS_WILD(c) (c==C_WILD)
 
+#define SHUNZI19	0x05
 #define KA5SHUNZI	0x04
 #define KEZI		0x03
 #define DUIZI		0x02
@@ -121,6 +122,15 @@ enum e_hu_type {
 #pragma   pack(1) 
 
 typedef struct {
+	int								cellscore;							//底分
+	//时间信息
+	char							cbTimeOutCard;						//出牌时间
+	char							cbTimeOperateCard;					//操作时间
+	char							cbTimeStartGame;					//开始时间
+	char							cbTimeWaitEnd;						//结算等待
+}s_sence_data_free_t;
+
+typedef struct {
 	//我的信息
 	unsigned short		my_chair;
 	char				wilds;//红中数量
@@ -136,7 +146,9 @@ typedef struct {
 	unsigned short		banker;
 		
 	int					left_cards;//剩余未摸的牌数
-}s_sence_data_t;
+	s_sence_data_free_t	free_info;
+
+}s_sence_data_playing_t;
 
 typedef struct {	//游戏开始
 

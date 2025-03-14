@@ -427,14 +427,12 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 		}
 		else {
 			//再校验一次，同时获取类型
-#ifdef WB_DEBUG
 			WASSERT(_pm[chair].hand_num % 3 == 2);
 			_logic.del_card(_pm[chair], cd);
 			if (!_logic.is_hu(_pm[chair], cd, true)) {
 				WASSERT(0);
 				return false;
 			}
-#endif
 		}
 
 		//天胡判断
@@ -516,11 +514,15 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 			if (_pm[chair].door_info[i][0] == 0) {
 				break;
 			}
+			//统计杠
 			if (_pm[chair].door_info[i][0] == DOOR_TYPE_GANG) {
 				gens++;
 				gang_score += (_pm[chair].door_info[i][3] == GANG_PENG ?1:2)* _base_score;
 			}
 		}
+
+		//统计最终牌型四张数
+
 		//conclue fans
 		for (int i = 0; i < idx; i++){
 			fans += hu_type_fans[hu_types[i]];
@@ -558,7 +560,7 @@ bool CTableLogic::operator_hu(WORD chair, carder cd, bool is_qinghu)
 		}
 		send(i, SUB_S_CONCLUD_NOW, &cn, sizeof(cn));
 	}
-	//conclude_table(chair);
+	_table->ConcludeGame(TEXT("一局结束"));
 	return true;
 }
 
@@ -618,9 +620,21 @@ void CTableLogic::conclude_game()
 	_table->ConcludeGame(TEXT("ok"));
 }
 
-void CTableLogic::send_scence(IServerUserItem* su)
+void CTableLogic::send_free_scence(IServerUserItem* su)
 {
-	s_sence_data_t sd = {};
+	s_sence_data_free_t df = {};
+	df.cellscore = _base_score;
+	df.cbTimeOutCard = OPT_TIME_OUT/1000;
+	df.cbTimeOperateCard = df.cbTimeOutCard;
+	df.cbTimeStartGame = 2;
+	df.cbTimeStartGame = 12;
+
+	_table->OnEventSendGameScene(su, &df, sizeof(df));
+}
+
+void CTableLogic::send_playing_scence(IServerUserItem* su)
+{
+	s_sence_data_playing_t sd = {};
 	WORD chair = 
 	sd.my_chair = su->GetChairID();
 	auto& mj = _pm[sd.my_chair];
@@ -637,7 +651,7 @@ void CTableLogic::send_scence(IServerUserItem* su)
 		memcpy(sd._table_cards[i], _table_cards[i], sizeof(_table_cards[i]));
 	}
 	
-	_table->OnEventSendGameScene(su, &sd, sizeof(s_sence_data_t));
+	_table->OnEventSendGameScene(su, &sd, sizeof(sd));
 
 }
 

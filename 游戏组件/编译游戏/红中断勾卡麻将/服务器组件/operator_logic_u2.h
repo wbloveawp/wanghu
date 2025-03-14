@@ -19,32 +19,7 @@
 
 #define STATUS_TIMEOUT_ID(s)	(TM_IDE_BAOTING+s)
 
-#define MAX_FANS	6
 
-const int hu_type_fans[e_hu_type::H_TYPE_MAX] = {
-	1 ,		//平胡
-	2 ,		//5对
-	3 ,		//龙1
-	4 ,		//龙2
-	1 ,		//对对
-	5 ,		//将对对
-
-	1 ,		//断幺九
-	1 ,		//卡5
-	4 ,		//带幺九
-	2 ,		//清一色
-
-	6 ,		//天胡
-	6 ,		//地胡
-
-	1 ,		//抢杠
-	1 ,		//杠上炮
-	1 ,		//杠上花
-
-	2 ,		//报听
-	0 ,		//请胡
-	1 		//海底
-};
 
 #define HU_ZIMO_MUL	2
 
@@ -82,7 +57,10 @@ class CTableLogic
 	carder				_control_card;
 	WORD				_control_chair;
 
-	int				_base_score;
+	SCORE				_base_score;
+	SCORE				_min_win;
+	SCORE				_revenue;
+
 protected:
 	void		clean_opt();
 
@@ -113,11 +91,13 @@ public:
 	void conclude_table(WORD winer, int types, e_hu_type hu_type[],int fans,int s);
 	void conclude_game();
 
-	void send_scence(IServerUserItem* su);
-
+	void send_playing_scence(IServerUserItem* su); 
+	void send_free_scence(IServerUserItem* su);
 protected:
 	void send(WORD chair, WORD cmd, void* msg, WORD len);
 
 public:
-	void send_base_score(SCORE lbasescore) { _base_score = lbasescore; }
+	void set_base_score(SCORE lbase_score) { _base_score = lbase_score; }
+	void set_min_win(SCORE lmin_win) { _min_win = lmin_win; }
+	void set_revenue(SCORE lrevenue) { _revenue = lrevenue; }
 };

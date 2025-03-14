@@ -20,6 +20,33 @@ const char str_hu_type_name[e_hu_type::H_TYPE_MAX][16] = {
 	"同色",
 };
 
+#define MAX_FANS	6
+
+const int hu_type_fans[e_hu_type::H_TYPE_MAX] = {
+	1 ,		//平胡
+	2 ,		//5对
+	3 ,		//龙1
+	4 ,		//龙2
+	1 ,		//对对
+	5 ,		//将对对
+
+	1 ,		//断幺九
+	1 ,		//卡5
+	4 ,		//带幺九
+	2 ,		//清一色
+
+	6 ,		//天胡
+	6 ,		//地胡
+
+	1 ,		//抢杠
+	1 ,		//杠上炮
+	1 ,		//杠上花
+
+	2 ,		//报听
+	0 ,		//请胡
+	1 		//海底
+};
+
 struct combine_t {
 	char		cidx;
 	char		combine[4][4];
@@ -55,6 +82,12 @@ class CLogic
 		carder all_cards[__all_cards_num];
 	};
 
+	struct card_hu_type_t{
+		int nfan;
+		int ntype;
+		e_hu_type types[e_hu_type::H_TYPE_MAX];
+	};
+
 public:
 	CLogic();
 	virtual ~CLogic();
@@ -70,19 +103,24 @@ public:
 	void add_card(mj_cards& mj, const carder& cd);
 	bool del_card(mj_cards& mj, const carder& cd);
 public:
-	bool is_hu(mj_cards& mj, const carder& cd,bool is_taker);
-
+	
 	e_hu_type is_5dui(const mj_cards& mj,const carder & cd);
-
 	bool peng(mj_cards& mj,char chair, const carder& cd);
-
 	char gang(mj_cards& mj, char chair, const carder& cd,bool is_taker);
 
+	bool is_hu(mj_cards& mj, const carder& cd, bool is_taker);
 protected:
+	bool make_hu(const mj_cards& mj);		//for is_hu
+	bool make_combine(const mj_cards& mj);	//for is_hu
 
-	int make_hu(const mj_cards& mj, const carder& cd);
-	bool make_combine(const mj_cards& mj, const carder& cd);
-	bool make_combine19(const mj_cards& mj);
+
+public:
+	int		get_max_type(mj_cards& mj, const carder& cd, bool is_taker,int base_fans);
+protected:
+	int		make_hu(const mj_cards& mj, const carder& cd, bool is_taker, int base_fans, card_hu_type_t & ht);
+	bool	make_combine(const mj_cards& mj, const carder& cd, bool is_taker, combine_t& cb);
+	bool	make_combine19(const mj_cards& mj);
+
 protected:
 	void		update_hand_data(mj_cards& mj);
 
@@ -91,8 +129,6 @@ protected:
 
 	e_hu_type	tongse_check(const mj_cards& mj);
 	e_hu_type	no19_check(const mj_cards& mj);
-	e_hu_type	ka5_check(const mj_cards& mj,const carder& cd=C_INVALID);
-
 
 
 	bool		make_19(const mj_cards& mj);
@@ -114,4 +150,7 @@ protected:
 	1.抓请胡的结算
 	2.卡5 的卡数
 	3.带幺九判定算法还可以继续改进，提高效率
+	4.获取最大番数逻辑
+	5.结算重写
+	6.下发牌需要转换
 */
